@@ -94,3 +94,41 @@ IF ENTERED wfeven THEN RETURN.
     (entered_expression
       field: (identifier))
     then: (return_statement)))
+
+================================================================================
+ENTERED expression - qualified name (table.field)
+================================================================================
+
+IF STKARTIC.artbar ENTERED THEN RETURN.
+IF NOT STKARTIC.artbar ENTERED THEN RETURN.
+IF STKARTIC.artbar NOT ENTERED THEN RETURN.
+IF NOT ENTERED STKARTIC.artbar THEN RETURN.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (if_statement
+    (entered_expression
+      field: (qualified_name
+        left: (identifier)
+        right: (identifier)))
+    then: (return_statement))
+  (if_statement
+    (unary_expression
+      (entered_expression
+        field: (qualified_name
+          left: (identifier)
+          right: (identifier))))
+    then: (return_statement))
+  (if_statement
+    (not_entered_expression
+      field: (qualified_name
+        left: (identifier)
+        right: (identifier)))
+    then: (return_statement))
+  (if_statement
+    (not_entered_expression
+      field: (qualified_name
+        left: (identifier)
+        right: (identifier)))
+    then: (return_statement)))
