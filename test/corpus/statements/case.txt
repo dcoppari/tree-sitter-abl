@@ -119,3 +119,27 @@ END.
       condition: (string_literal)
       (run_statement
         procedure: (identifier)))))
+
+================================================================================
+CASE with period terminator instead of colon
+================================================================================
+
+case wvalor.
+  when "M" then return "MEDIA".
+  when "B" then return "BAJA".
+  otherwise return "".
+end case.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (case_statement
+    (identifier)
+    (case_when_phrase
+      condition: (string_literal)
+      (return_statement value: (string_literal)))
+    (case_when_phrase
+      condition: (string_literal)
+      (return_statement value: (string_literal)))
+    (case_otherwise_phrase
+      (return_statement value: (string_literal)))))

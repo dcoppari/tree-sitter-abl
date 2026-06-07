@@ -6207,13 +6207,27 @@
           ]
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_colon"
-          },
-          "named": false,
-          "value": ":"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "ALIAS",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_colon"
+              },
+              "named": false,
+              "value": ":"
+            },
+            {
+              "type": "ALIAS",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_terminator_dot"
+              },
+              "named": false,
+              "value": "."
+            }
+          ]
         },
         {
           "type": "REPEAT1",
