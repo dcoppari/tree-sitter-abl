@@ -6422,18 +6422,6 @@
         "required": false,
         "types": [
           {
-            "type": "INPUT",
-            "named": false
-          },
-          {
-            "type": "MESSAGES",
-            "named": false
-          },
-          {
-            "type": "NORMAL",
-            "named": false
-          },
-          {
             "type": "color_phrase",
             "named": true
           }

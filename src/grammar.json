@@ -2788,7 +2788,7 @@
               "name": "color",
               "content": {
                 "type": "SYMBOL",
-                "name": "__browse_color_value"
+                "name": "color_phrase"
               }
             }
           ]
@@ -2918,7 +2918,7 @@
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "__browse_title_option"
+                  "name": "_frame_title_option"
                 },
                 {
                   "type": "BLANK"
@@ -4025,58 +4025,6 @@
           }
         }
       ]
-    },
-    "__browse_color_value": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "ALIAS",
-          "content": {
-            "type": "TOKEN",
-            "content": {
-              "type": "PATTERN",
-              "value": "NORMAL",
-              "flags": "i"
-            }
-          },
-          "named": false,
-          "value": "NORMAL"
-        },
-        {
-          "type": "ALIAS",
-          "content": {
-            "type": "TOKEN",
-            "content": {
-              "type": "PATTERN",
-              "value": "INPUT",
-              "flags": "i"
-            }
-          },
-          "named": false,
-          "value": "INPUT"
-        },
-        {
-          "type": "ALIAS",
-          "content": {
-            "type": "TOKEN",
-            "content": {
-              "type": "PATTERN",
-              "value": "MESSAGES",
-              "flags": "i"
-            }
-          },
-          "named": false,
-          "value": "MESSAGES"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "color_phrase"
-        }
-      ]
-    },
-    "__browse_title_option": {
-      "type": "SYMBOL",
-      "name": "_frame_title_option"
     },
     "__browse_modifier": {
       "type": "CHOICE",
