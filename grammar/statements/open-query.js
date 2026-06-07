@@ -67,7 +67,10 @@ module.exports = ({ kw }) => ({
 
   __open_query_record_phrase: ($) =>
     prec.right(
-      seq(field("record", $._identifier_or_qualified_name), repeat($.__open_query_record_option)),
+      seq(
+        field("record", choice($._identifier_or_qualified_name, $.argument_reference)),
+        repeat($.__open_query_record_option),
+      ),
     ),
   __open_query_record_option: ($) =>
     choice(

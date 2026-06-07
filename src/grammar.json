@@ -29215,8 +29215,17 @@
             "type": "FIELD",
             "name": "record",
             "content": {
-              "type": "SYMBOL",
-              "name": "_identifier_or_qualified_name"
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "_identifier_or_qualified_name"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "argument_reference"
+                }
+              ]
             }
           },
           {
@@ -35350,8 +35359,17 @@
           "type": "FIELD",
           "name": "table",
           "content": {
-            "type": "SYMBOL",
-            "name": "_identifier_or_qualified_name"
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_identifier_or_qualified_name"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "argument_reference"
+              }
+            ]
           }
         },
         {

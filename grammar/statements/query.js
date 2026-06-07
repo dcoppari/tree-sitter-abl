@@ -30,7 +30,7 @@ module.exports = ({ kw }) => ({
 
   __query_table_entry: ($) =>
     seq(
-      field("table", $._identifier_or_qualified_name),
+      field("table", choice($._identifier_or_qualified_name, $.argument_reference)),
       optional(alias($.__query_field_list, $.field_list)),
     ),
   __query_field_list: ($) =>
