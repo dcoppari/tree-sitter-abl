@@ -298,3 +298,23 @@ OPEN QUERY qCust FOR EACH Customer QUERY-TUNING(JOIN-BY-SQLDB NO-BIND-WHERE) NO-
     lock: (no_lock)
     (indexed_reposition)
     max_rows: (number_literal)))
+
+================================================================================
+OPEN QUERY - WHERE without condition (empty WHERE before BY)
+================================================================================
+
+OPEN QUERY qry03
+    FOR EACH wkf-sub WHERE
+                        BY wkf-sub.wcobnro.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (open_query_statement
+    query: (identifier)
+    (record_phrase
+      record: (identifier))
+    (by_phrase
+      by: (qualified_name
+        left: (identifier)
+        right: (identifier)))))

@@ -72,7 +72,7 @@ module.exports = ({ kw }) => ({
   __open_query_record_option: ($) =>
     choice(
       seq(kw("OF"), field("of", $._identifier_or_qualified_name)),
-      seq(kw("WHERE"), field("where", $._expression)),
+      prec.right(seq(kw("WHERE"), field("where", optional($._expression)))),
       seq(kw("USE-INDEX"), field("index", $.identifier)),
       field("lock", $.__open_query_lock),
     ),

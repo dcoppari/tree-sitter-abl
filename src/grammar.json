@@ -28792,30 +28792,42 @@
           ]
         },
         {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "ALIAS",
-              "content": {
-                "type": "TOKEN",
+          "type": "PREC_RIGHT",
+          "value": 0,
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "ALIAS",
                 "content": {
-                  "type": "PATTERN",
-                  "value": "WHERE",
-                  "flags": "i"
-                }
+                  "type": "TOKEN",
+                  "content": {
+                    "type": "PATTERN",
+                    "value": "WHERE",
+                    "flags": "i"
+                  }
+                },
+                "named": false,
+                "value": "WHERE"
               },
-              "named": false,
-              "value": "WHERE"
-            },
-            {
-              "type": "FIELD",
-              "name": "where",
-              "content": {
-                "type": "SYMBOL",
-                "name": "_expression"
+              {
+                "type": "FIELD",
+                "name": "where",
+                "content": {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "_expression"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                }
               }
-            }
-          ]
+            ]
+          }
         },
         {
           "type": "SEQ",
