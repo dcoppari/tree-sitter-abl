@@ -23,7 +23,6 @@ module.exports = ({ kw }) => ({
             seq(
               kw("OF"),
               field("object", $.qualified_name),
-              optional($.__trigger_procedure_new_value),
               optional($.__trigger_procedure_old_value),
             ),
             seq($.__trigger_procedure_new_value, optional($.__trigger_procedure_old_value)),

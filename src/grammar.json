@@ -44264,18 +44264,6 @@
                           "members": [
                             {
                               "type": "SYMBOL",
-                              "name": "__trigger_procedure_new_value"
-                            },
-                            {
-                              "type": "BLANK"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "CHOICE",
-                          "members": [
-                            {
-                              "type": "SYMBOL",
                               "name": "__trigger_procedure_old_value"
                             },
                             {
