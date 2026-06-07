@@ -1,7 +1,7 @@
 module.exports = ({ kw }) => ({
   record_phrase: ($) =>
     seq(
-      field("record", $._identifier_or_qualified_name),
+      field("record", choice($._identifier_or_qualified_name, $.argument_reference)),
       optional(alias($.__record_field_list, $.field_list)),
       optional($.preprocessor_name),
       repeat($.__record_option),

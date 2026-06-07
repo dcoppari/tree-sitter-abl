@@ -700,3 +700,19 @@ END.
         record: (qualified_name
           left: (identifier)
           right: (identifier))))))
+
+================================================================================
+FOR EACH with argument reference (preprocessor positional arg as table name)
+================================================================================
+
+FOR EACH {2} NO-LOCK:
+END.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (for_statement
+    (record_phrase
+      record: (argument_reference)
+      (no_lock))
+    (body)))

@@ -66369,6 +66369,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
