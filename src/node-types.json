@@ -87996,6 +87996,16 @@
     "type": "view_statement",
     "named": true,
     "fields": {
+      "frame": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
       "stream": {
         "multiple": false,
         "required": false,

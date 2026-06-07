@@ -3,5 +3,12 @@ module.exports = ({ kw }) => ({
   __view_tail: ($) =>
     choice(seq($._stream_phrase, optional($.__view_window_tail)), $.__view_window_tail),
   __view_window_tail: ($) =>
-    choice(seq($.widget_phrase, optional($.in_window_phrase)), $.in_window_phrase),
+    choice(
+      seq(
+        $.widget_phrase,
+        optional(seq(kw("IN"), kw("FRAME"), field("frame", $.identifier))),
+        optional($.in_window_phrase),
+      ),
+      $.in_window_phrase,
+    ),
 });

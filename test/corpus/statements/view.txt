@@ -155,3 +155,17 @@ VIEW STREAM-HANDLE hS FRAME f1.
     stream: (identifier)
     (widget_phrase
       frame: (identifier))))
+
+================================================================================
+VIEW widget IN FRAME frame
+================================================================================
+
+view wBrw01 in frame medio.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (view_statement
+    (widget_phrase
+      handle: (identifier))
+    frame: (identifier)))
