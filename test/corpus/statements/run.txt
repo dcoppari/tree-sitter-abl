@@ -485,3 +485,19 @@ RUN calc.p wsval "label".
     (positional_arguments
       (identifier)
       (string_literal))))
+
+================================================================================
+RUN with quoted string path
+================================================================================
+
+run "../fac/faccon12.p".
+run "sub/module.p" no-error.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (run_statement
+    procedure: (string_literal))
+  (run_statement
+    procedure: (string_literal)
+    (no_error)))
