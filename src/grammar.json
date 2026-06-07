@@ -30491,7 +30491,7 @@
                       "type": "TOKEN",
                       "content": {
                         "type": "PATTERN",
-                        "value": "INITIAL",
+                        "value": "INIT(I(A(L)?)?)?",
                         "flags": "i"
                       }
                     },
@@ -42672,7 +42672,7 @@
                 "type": "TOKEN",
                 "content": {
                   "type": "PATTERN",
-                  "value": "INITIAL",
+                  "value": "INIT(I(A(L)?)?)?",
                   "flags": "i"
                 }
               },
@@ -43903,7 +43903,7 @@
                 "type": "TOKEN",
                 "content": {
                   "type": "PATTERN",
-                  "value": "INITIAL",
+                  "value": "INIT(I(A(L)?)?)?",
                   "flags": "i"
                 }
               },

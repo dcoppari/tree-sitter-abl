@@ -822,3 +822,27 @@ DEFINE INPUT PARAMETER pExtent0 AS INTEGER EXTENT 0.
     type: (identifier)
     (extent_phrase
       size: (number_literal))))
+
+================================================================================
+PARAMETER DEFINITION - INIT abbreviation (INITIAL keyword abbreviated)
+================================================================================
+
+def output parameter w_Ok as log init FALSE.
+def input parameter wdisp as log init false.
+def output parameter w_x as char init "".
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (parameter_definition
+    name: (identifier)
+    type: (identifier)
+    initial: (boolean_literal))
+  (parameter_definition
+    name: (identifier)
+    type: (identifier)
+    initial: (boolean_literal))
+  (parameter_definition
+    name: (identifier)
+    type: (identifier)
+    initial: (string_literal)))

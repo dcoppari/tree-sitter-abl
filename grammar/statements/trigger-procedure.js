@@ -52,7 +52,7 @@ module.exports = ({ kw }) => ({
     choice(
       seq(kw("COLUMN-LABEL"), field("label", $.string_literal)),
       $._format_string,
-      seq(kw("INITIAL"), field("initial", $._expression)),
+      seq(kw("INITIAL", { offset: 4 }), field("initial", $._expression)),
       $._aggregate_label_phrase,
       alias(kw("NO-UNDO"), $.no_undo),
     ),
