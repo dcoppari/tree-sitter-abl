@@ -45,10 +45,15 @@ module.exports = ({ kw }) => ({
 
   _dos_unix_command: ($) =>
     choice(
-      field("command_token", $.identifier),
+      field("command_token", $._identifier_or_qualified_name),
       field("command_token", $.string_literal),
+      field("command_token", $.number_literal),
+      field("command_token", alias($.__dos_unix_raw_token, $.raw_token)),
       seq(kw("VALUE"), "(", field("command", $._expression), ")"),
     ),
+  // Matches Unix-style flags (-q, --verbose), redirects (>, >>, <), and
+  // other shell tokens that are not ABL identifiers or string literals.
+  __dos_unix_raw_token: () => token(/[-]{1,2}[^\s.]+|>{1,2}|<[^{]/),
   _dos_unix_tail: ($) =>
     choice(
       seq(alias(kw("SILENT"), $.silent), repeat($._dos_unix_command)),

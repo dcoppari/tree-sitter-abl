@@ -30718,6 +30718,22 @@
             "named": true
           },
           {
+            "type": "macro_concatenated_name",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "qualified_name",
+            "named": true
+          },
+          {
+            "type": "raw_token",
+            "named": true
+          },
+          {
             "type": "string_literal",
             "named": true
           }
@@ -81810,6 +81826,22 @@
             "named": true
           },
           {
+            "type": "macro_concatenated_name",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "qualified_name",
+            "named": true
+          },
+          {
+            "type": "raw_token",
+            "named": true
+          },
+          {
             "type": "string_literal",
             "named": true
           }
@@ -91278,6 +91310,10 @@
   },
   {
     "type": "program_flag",
+    "named": true
+  },
+  {
+    "type": "raw_token",
     "named": true
   },
   {

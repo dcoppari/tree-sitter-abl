@@ -62862,7 +62862,7 @@
           "name": "command_token",
           "content": {
             "type": "SYMBOL",
-            "name": "identifier"
+            "name": "_identifier_or_qualified_name"
           }
         },
         {
@@ -62871,6 +62871,27 @@
           "content": {
             "type": "SYMBOL",
             "name": "string_literal"
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "command_token",
+          "content": {
+            "type": "SYMBOL",
+            "name": "number_literal"
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "command_token",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "__dos_unix_raw_token"
+            },
+            "named": true,
+            "value": "raw_token"
           }
         },
         {
@@ -62908,6 +62929,13 @@
           ]
         }
       ]
+    },
+    "__dos_unix_raw_token": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "[-]{1,2}[^\\s.]+|>{1,2}|<[^{]"
+      }
     },
     "_dos_unix_tail": {
       "type": "CHOICE",
