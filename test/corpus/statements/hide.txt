@@ -128,3 +128,17 @@ HIDE ALL NO-PAUSE IN WINDOW w1.
     (no_pause)
     (in_window_phrase
       window: (identifier))))
+
+================================================================================
+HIDE widget IN FRAME frame
+================================================================================
+
+hide wnroest in frame cuerpo.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (hide_statement
+    (widget_phrase
+      handle: (identifier))
+    frame: (identifier)))

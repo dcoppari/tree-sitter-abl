@@ -3,7 +3,11 @@ module.exports = ({ kw }) => ({
   __hide_tail: ($) =>
     choice(
       seq($._stream_phrase, optional($.__hide_tail_after_stream)),
-      seq($.__hide_target, optional($.__hide_window_tail)),
+      seq(
+        $.__hide_target,
+        optional(seq(kw("IN"), kw("FRAME"), field("frame", $.identifier))),
+        optional($.__hide_window_tail),
+      ),
       $.__hide_window_tail,
     ),
   __hide_tail_after_stream: ($) =>
