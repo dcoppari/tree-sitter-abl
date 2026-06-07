@@ -10,5 +10,5 @@ module.exports = ({ kw }) => ({
       seq(alias(kw("ALL"), $.all), optional(alias(kw("NO-PAUSE"), $.no_pause))),
       alias(kw("NO-PAUSE"), $.no_pause),
     ),
-  __clear_frame: ($) => seq(kw("FRAME"), field("frame", $.identifier)),
+  __clear_frame: ($) => seq(kw("FRAME", { offset: 3 }), field("frame", $.identifier)),
 });

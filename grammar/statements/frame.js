@@ -3,7 +3,7 @@ module.exports = ({ kw }) => ({
     seq(
       kw("DEFINE", { offset: 3 }),
       optional($.__frame_modifier),
-      kw("FRAME"),
+      kw("FRAME", { offset: 3 }),
       $.__frame_body,
       $._terminator,
     ),

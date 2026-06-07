@@ -6,7 +6,7 @@ module.exports = ({ kw }) => ({
     choice(
       seq(
         $.widget_phrase,
-        optional(seq(kw("IN"), kw("FRAME"), field("frame", $.identifier))),
+        optional(seq(kw("IN"), kw("FRAME", { offset: 3 }), field("frame", $.identifier))),
         optional($.in_window_phrase),
       ),
       $.in_window_phrase,

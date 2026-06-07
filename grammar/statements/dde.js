@@ -40,7 +40,7 @@ module.exports = ({ kw }) => ({
   __dde_initiate_body: ($) =>
     seq(
       field("ddeid", $._expression),
-      kw("FRAME"),
+      kw("FRAME", { offset: 3 }),
       field("frame", $.identifier),
       kw("APPLICATION"),
       field("application", $._expression),

@@ -5,7 +5,7 @@ module.exports = ({ kw }) => ({
       seq($._stream_phrase, optional($.__hide_tail_after_stream)),
       seq(
         $.__hide_target,
-        optional(seq(kw("IN"), kw("FRAME"), field("frame", $.identifier))),
+        optional(seq(kw("IN"), kw("FRAME", { offset: 3 }), field("frame", $.identifier))),
         optional($.__hide_window_tail),
       ),
       $.__hide_window_tail,

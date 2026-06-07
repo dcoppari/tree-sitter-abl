@@ -11,7 +11,7 @@ module.exports = ({ kw }) => ({
         kw("DIALOG-BOX"),
         kw("EDITOR"),
         kw("FILL-IN"),
-        kw("FRAME"),
+        kw("FRAME", { offset: 3 }),
         kw("IMAGE"),
         kw("MENU"),
         kw("MENU-ITEM"),

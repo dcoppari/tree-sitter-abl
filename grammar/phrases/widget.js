@@ -8,7 +8,7 @@ module.exports = ({ kw }) => ({
       $.__widget_menu,
     ),
 
-  __widget_frame: ($) => seq(kw("FRAME"), field("frame", $.identifier)),
+  __widget_frame: ($) => seq(kw("FRAME", { offset: 3 }), field("frame", $.identifier)),
   __widget_browse: ($) => seq(kw("BROWSE"), field("browse", $.identifier)),
 
   __widget_handle: ($) => seq(field("handle", $._identifier_or_qualified_name)),
@@ -18,7 +18,7 @@ module.exports = ({ kw }) => ({
       seq(
         optional(kw("FIELD")),
         field("field", $._identifier_or_array_access),
-        optional(seq(kw("IN"), kw("FRAME"), field("frame", $.identifier))),
+        optional(seq(kw("IN"), kw("FRAME", { offset: 3 }), field("frame", $.identifier))),
       ),
       seq(
         field("column", $._identifier_or_array_access),

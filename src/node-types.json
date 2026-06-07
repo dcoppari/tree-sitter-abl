@@ -736,6 +736,10 @@
             "named": false
           },
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -5038,6 +5042,10 @@
           {
             "type": ")",
             "named": false
+          },
+          {
+            "type": "argument_reference",
+            "named": true
           },
           {
             "type": "identifier",
@@ -13071,6 +13079,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -54548,6 +54560,10 @@
           {
             "type": ")",
             "named": false
+          },
+          {
+            "type": "argument_reference",
+            "named": true
           },
           {
             "type": "identifier",

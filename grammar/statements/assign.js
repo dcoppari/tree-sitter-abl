@@ -30,7 +30,7 @@ module.exports = ({ kw }) => ({
     seq(
       optional(kw("INPUT")),
       choice(
-        seq(kw("FRAME"), field("frame", $.identifier)),
+        seq(kw("FRAME", { offset: 3 }), field("frame", $.identifier)),
         seq(kw("BROWSE"), field("browse", $.identifier)),
       ),
       repeat1($.__assign_input_item),

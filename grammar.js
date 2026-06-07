@@ -339,7 +339,7 @@ module.exports = grammar({
           /[_\p{L}][\p{L}\p{N}_\-&]*(\{(?:&[0-9A-Za-z_-]+|[0-9A-Za-z_-]+)\}[\p{L}\p{N}_\-&]*)+/i,
         ),
 
-      _widgets: ($) => prec.right(alias(choice(...WIDGETS, kw("FRAME")), $.identifier)),
+      _widgets: ($) => prec.right(alias(choice(...WIDGETS, kw("FRAME", { offset: 3 })), $.identifier)),
       _events: ($) =>
         choice(
           $.identifier,

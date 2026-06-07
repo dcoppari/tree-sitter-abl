@@ -1291,7 +1291,7 @@
                     "type": "TOKEN",
                     "content": {
                       "type": "PATTERN",
-                      "value": "FRAME",
+                      "value": "FRA(M(E)?)?",
                       "flags": "i"
                     }
                   },
@@ -9714,7 +9714,7 @@
             "type": "TOKEN",
             "content": {
               "type": "PATTERN",
-              "value": "FRAME",
+              "value": "FRA(M(E)?)?",
               "flags": "i"
             }
           },
@@ -14991,7 +14991,7 @@
             "type": "TOKEN",
             "content": {
               "type": "PATTERN",
-              "value": "FRAME",
+              "value": "FRA(M(E)?)?",
               "flags": "i"
             }
           },
@@ -20509,7 +20509,7 @@
             "type": "TOKEN",
             "content": {
               "type": "PATTERN",
-              "value": "FRAME",
+              "value": "FRA(M(E)?)?",
               "flags": "i"
             }
           },
@@ -22918,7 +22918,7 @@
                         "type": "TOKEN",
                         "content": {
                           "type": "PATTERN",
-                          "value": "FRAME",
+                          "value": "FRA(M(E)?)?",
                           "flags": "i"
                         }
                       },
@@ -27369,7 +27369,7 @@
                     "type": "TOKEN",
                     "content": {
                       "type": "PATTERN",
-                      "value": "FRAME",
+                      "value": "FRA(M(E)?)?",
                       "flags": "i"
                     }
                   },
@@ -47975,7 +47975,7 @@
                         "type": "TOKEN",
                         "content": {
                           "type": "PATTERN",
-                          "value": "FRAME",
+                          "value": "FRA(M(E)?)?",
                           "flags": "i"
                         }
                       },
@@ -49076,7 +49076,7 @@
                 "type": "TOKEN",
                 "content": {
                   "type": "PATTERN",
-                  "value": "FRAME",
+                  "value": "FRA(M(E)?)?",
                   "flags": "i"
                 }
               },
@@ -49696,8 +49696,17 @@
       ]
     },
     "__available_record_name": {
-      "type": "SYMBOL",
-      "name": "_identifier_or_qualified_name"
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_identifier_or_qualified_name"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "argument_reference"
+        }
+      ]
     },
     "can_find_expression": {
       "type": "SEQ",
@@ -50027,7 +50036,7 @@
             "type": "TOKEN",
             "content": {
               "type": "PATTERN",
-              "value": "FRAME",
+              "value": "FRA(M(E)?)?",
               "flags": "i"
             }
           },
@@ -50100,8 +50109,17 @@
       ]
     },
     "__record_query_record_name": {
-      "type": "SYMBOL",
-      "name": "_identifier_or_qualified_name"
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_identifier_or_qualified_name"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "argument_reference"
+        }
+      ]
     },
     "__record_query_index_name": {
       "type": "SYMBOL",
@@ -50165,8 +50183,17 @@
       ]
     },
     "__locked_record_name": {
-      "type": "SYMBOL",
-      "name": "_identifier_or_qualified_name"
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_identifier_or_qualified_name"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "argument_reference"
+        }
+      ]
     },
     "new_expression": {
       "type": "CHOICE",
@@ -50582,8 +50609,17 @@
       ]
     },
     "__ambiguous_record_name": {
-      "type": "SYMBOL",
-      "name": "_identifier_or_qualified_name"
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_identifier_or_qualified_name"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "argument_reference"
+        }
+      ]
     },
     "accum_expression": {
       "type": "SEQ",
@@ -50676,7 +50712,7 @@
                     "type": "TOKEN",
                     "content": {
                       "type": "PATTERN",
-                      "value": "FRAME",
+                      "value": "FRA(M(E)?)?",
                       "flags": "i"
                     }
                   },
@@ -56171,7 +56207,7 @@
                       "type": "TOKEN",
                       "content": {
                         "type": "PATTERN",
-                        "value": "FRAME",
+                        "value": "FRA(M(E)?)?",
                         "flags": "i"
                       }
                     },
@@ -57876,7 +57912,7 @@
                     "type": "TOKEN",
                     "content": {
                       "type": "PATTERN",
-                      "value": "FRAME",
+                      "value": "FRA(M(E)?)?",
                       "flags": "i"
                     }
                   },
@@ -59869,7 +59905,7 @@
             "type": "TOKEN",
             "content": {
               "type": "PATTERN",
-              "value": "FRAME",
+              "value": "FRA(M(E)?)?",
               "flags": "i"
             }
           },
@@ -59985,7 +60021,7 @@
                         "type": "TOKEN",
                         "content": {
                           "type": "PATTERN",
-                          "value": "FRAME",
+                          "value": "FRA(M(E)?)?",
                           "flags": "i"
                         }
                       },
@@ -60965,7 +61001,7 @@
                 "type": "TOKEN",
                 "content": {
                   "type": "PATTERN",
-                  "value": "FRAME",
+                  "value": "FRA(M(E)?)?",
                   "flags": "i"
                 }
               },
