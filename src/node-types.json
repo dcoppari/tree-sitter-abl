@@ -52454,6 +52454,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -89474,6 +89478,14 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_qualified_name",
+            "named": true
+          },
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
