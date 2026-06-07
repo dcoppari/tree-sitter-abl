@@ -745,3 +745,20 @@ END.
               name: (binary_expression
                 (identifier)
                 (number_literal)))))))))
+
+================================================================================
+FUNCTION FORWARD with type-only parameter list
+================================================================================
+
+function foo returns char (char) forward.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (function_forward_definition
+    name: (identifier)
+    type: (identifier)
+    (parameters
+      (parameter
+        type: (identifier)))
+    (forward)))
