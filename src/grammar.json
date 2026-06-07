@@ -11359,6 +11359,10 @@
                   {
                     "type": "SYMBOL",
                     "name": "function_call"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "opsys_file"
                   }
                 ]
               }

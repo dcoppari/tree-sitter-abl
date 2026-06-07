@@ -23284,6 +23284,10 @@
             "named": true
           },
           {
+            "type": "opsys_file",
+            "named": true
+          },
+          {
             "type": "string_literal",
             "named": true
           }

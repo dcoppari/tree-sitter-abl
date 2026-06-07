@@ -3,7 +3,7 @@ module.exports = ({ kw }) => ({
   __connect_tail: ($) =>
     choice(
       seq(
-        field("database", choice($.identifier, $.string_literal, $.function_call)),
+        field("database", choice($.identifier, $.string_literal, $.function_call, $.opsys_file)),
         repeat($.__connect_option),
       ),
       repeat1($.__connect_option),
