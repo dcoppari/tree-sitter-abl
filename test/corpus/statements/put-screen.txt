@@ -224,3 +224,29 @@ PUT SCREEN COLOR value('RED') 'Label' COL 9 ROW 3.
     value: (string_literal)
     column: (number_literal)
     row: (number_literal)))
+
+================================================================================
+PUT SCREEN - value with mid-COLOR before ROW (legacy)
+================================================================================
+
+PUT SCREEN 'Sc' COLOR brown ROW 2 COL 5.
+PUT SCREEN 'Sc' COLOR brown ROW 2.
+PUT SCREEN 'Sc' ROW 2.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (put_screen_statement
+    value: (string_literal)
+    (color_phrase
+      color: (identifier))
+    row: (number_literal)
+    column: (number_literal))
+  (put_screen_statement
+    value: (string_literal)
+    (color_phrase
+      color: (identifier))
+    row: (number_literal))
+  (put_screen_statement
+    value: (string_literal)
+    row: (number_literal)))

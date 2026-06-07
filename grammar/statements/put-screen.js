@@ -12,9 +12,10 @@ module.exports = ({ kw }) => ({
           optional(seq(choice(kw("COLUMN"), kw("COL")), field("column", $._expression))),
           field("value", $._expression),
         ),
-        // Orden legacy: value ROW [COL]  (ROW requerido para desambiguar)
+        // Orden legacy: value [COLOR] ROW [COL]  (ROW requerido para desambiguar)
         seq(
           field("value", $._expression),
+          optional(alias($.__put_screen_color_phrase, $.color_phrase)),
           seq(kw("ROW"), field("row", $._expression)),
           optional(seq(choice(kw("COLUMN"), kw("COL")), field("column", $._expression))),
         ),
