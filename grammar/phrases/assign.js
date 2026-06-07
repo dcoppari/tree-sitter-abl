@@ -10,7 +10,7 @@ module.exports = ({ kw }) => ({
 
   __assign_pair: ($) =>
     seq(
-      field("left", choice($._assignable, $.__assign_keyword_identifier, $.__assign_browse_attr)),
+      field("left", choice($._assignable, $.argument_qualified_name, $.__assign_keyword_identifier, $.__assign_browse_attr)),
       optional(seq("=", field("right", choice($.array_initializer, $._expression)))),
       optional(seq(kw("WHEN"), field("when", $._expression))),
     ),

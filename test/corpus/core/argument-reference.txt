@@ -31,3 +31,31 @@ ARGUMENT REFERENCE positional and all arguments
   (empty_statement)
   (argument_reference)
   (empty_statement))
+
+================================================================================
+ARGUMENT REFERENCE in ASSIGN left-hand side
+================================================================================
+
+ASSIGN
+  {1}.siscod = tp-param.tsiscod
+  {1}.parcla = tp-param.tparcla.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (assign_statement
+    (assign_phrase
+      (assign_pair
+        left: (argument_qualified_name
+          left: (argument_reference)
+          right: (identifier))
+        right: (qualified_name
+          left: (identifier)
+          right: (identifier)))
+      (assign_pair
+        left: (argument_qualified_name
+          left: (argument_reference)
+          right: (identifier))
+        right: (qualified_name
+          left: (identifier)
+          right: (identifier))))))
