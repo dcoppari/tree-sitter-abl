@@ -569,3 +569,21 @@ assign x:list-items in frame {1} = wTmp.
             right: (identifier))
           widget: (argument_reference))
         right: (identifier)))))
+
+================================================================================
+ASSIGN with INPUT BROWSE expression as RHS
+================================================================================
+
+a = input browse wBrw tbl.fld.
+
+---
+
+(source_code
+  (assignment_statement
+    left: (identifier)
+    operator: (assignment_operator)
+    right: (input_expression
+      browse: (identifier)
+      field: (qualified_name
+        left: (identifier)
+        right: (identifier)))))
