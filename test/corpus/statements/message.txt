@@ -476,3 +476,19 @@ MESSAGE "Select" VIEW-AS ALERT-BOX SET flag VIEW-AS TOGGLE-BOX.
     (set_update_phrase
       field: (identifier)
       (view_as_phrase))))
+
+================================================================================
+AVAILABLE with argument_reference
+================================================================================
+
+if not avail {2} then return no-apply.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (if_statement
+    (unary_expression
+      (available_expression
+        record: (argument_reference)))
+    then: (return_statement
+      (no_apply))))

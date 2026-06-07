@@ -7,5 +7,6 @@ module.exports = ({ kw }) => ({
       field("record", choice($.__available_record_name, seq("(", $.__available_record_name, ")"))),
     ),
 
-  __available_record_name: ($) => $._identifier_or_qualified_name,
+  __available_record_name: ($) =>
+    choice($._identifier_or_qualified_name, $.argument_reference),
 });

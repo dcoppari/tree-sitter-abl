@@ -31,7 +31,7 @@ module.exports = ({ kw }) => ({
   __record_query_frame_phrase: ($) =>
     seq(
       kw("AND"),
-      kw("FRAME"),
+      kw("FRAME", { offset: 3 }),
       optional(field("frame", $.identifier)),
       field("field", $.identifier),
     ),
@@ -39,6 +39,7 @@ module.exports = ({ kw }) => ({
   __record_query_use_index: ($) =>
     seq(kw("USE-INDEX"), field("index", $.__record_query_index_name)),
 
-  __record_query_record_name: ($) => $._identifier_or_qualified_name,
+  __record_query_record_name: ($) =>
+    choice($._identifier_or_qualified_name, $.argument_reference),
   __record_query_index_name: ($) => $._identifier_or_qualified_name,
 });

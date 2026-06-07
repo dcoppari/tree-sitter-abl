@@ -4,5 +4,6 @@ module.exports = ({ kw }) => ({
   __locked_body: ($) =>
     seq(field("record", choice($.__locked_record_name, seq("(", $.__locked_record_name, ")")))),
 
-  __locked_record_name: ($) => $._identifier_or_qualified_name,
+  __locked_record_name: ($) =>
+    choice($._identifier_or_qualified_name, $.argument_reference),
 });

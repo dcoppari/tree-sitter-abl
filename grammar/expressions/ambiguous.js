@@ -6,5 +6,6 @@ module.exports = ({ kw }) => ({
       field("record", choice($.__ambiguous_record_name, seq("(", $.__ambiguous_record_name, ")"))),
     ),
 
-  __ambiguous_record_name: ($) => $._identifier_or_qualified_name,
+  __ambiguous_record_name: ($) =>
+    choice($._identifier_or_qualified_name, $.argument_reference),
 });
