@@ -56,7 +56,10 @@ bool tree_sitter_abl_external_scanner_scan(
         return true;
       }
 
-      if (valid_symbols[TERMINATOR_DOT]) {
+      // When '.' is not followed by alpha, it cannot be a NAMEDOT regardless of valid_symbols.
+      // Emit TERMINATOR_DOT even when only NAMEDOT was active — the GLR will fail the
+      // argument_qualified_name branch and recover via the standalone argument_reference path.
+      if (valid_symbols[TERMINATOR_DOT] || valid_symbols[NAMEDOT]) {
         lexer->result_symbol = TERMINATOR_DOT;
         return true;
       }

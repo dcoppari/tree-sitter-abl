@@ -133,6 +133,9 @@ module.exports = grammar({
     // array_access as left of object_access: campo[n]:attr can be parsed as
     // browse_enable_field starting with _identifier_or_qualified_name or as _array_target.
     [$.__browse_enable_field, $._array_target],
+    // {1}.field (argument_qualified_name) vs {1}. (argument_reference + terminator):
+    // both start with argument_reference; scanner resolves via NAMEDOT vs TERMINATOR_DOT.
+    [$.argument_qualified_name, $.argument_reference],
   ],
   inline: ($) => [
     $.__find_record_name,
@@ -450,6 +453,13 @@ module.exports = grammar({
       qualified_name: ($) =>
         seq(
           field("left", choice($.macro_concatenated_name, $.identifier, $.preprocessor_name)),
+          repeat1(seq($._namedot, field("right", alias($._identifier_immediate, $.identifier)))),
+        ),
+
+      // {1}.campo or {2}.campo.subcampo — include argument reference qualified with a field name
+      argument_qualified_name: ($) =>
+        seq(
+          field("left", $.argument_reference),
           repeat1(seq($._namedot, field("right", alias($._identifier_immediate, $.identifier)))),
         ),
 

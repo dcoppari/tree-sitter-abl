@@ -61534,6 +61534,44 @@
         }
       ]
     },
+    "argument_qualified_name": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "FIELD",
+          "name": "left",
+          "content": {
+            "type": "SYMBOL",
+            "name": "argument_reference"
+          }
+        },
+        {
+          "type": "REPEAT1",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_namedot"
+              },
+              {
+                "type": "FIELD",
+                "name": "right",
+                "content": {
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_identifier_immediate"
+                  },
+                  "named": true,
+                  "value": "identifier"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
     "nested_type_name": {
       "type": "SEQ",
       "members": [
@@ -64093,6 +64131,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "argument_qualified_name"
+        },
+        {
+          "type": "SYMBOL",
           "name": "argument_reference"
         },
         {
@@ -65045,6 +65087,10 @@
     [
       "__browse_enable_field",
       "_array_target"
+    ],
+    [
+      "argument_qualified_name",
+      "argument_reference"
     ]
   ],
   "precedences": [

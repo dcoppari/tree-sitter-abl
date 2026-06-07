@@ -29,6 +29,7 @@ module.exports = ({ kw, ctx }) => ({
       $.array_access,
       $.scoped_name,
       $.object_access,
+      $.argument_qualified_name,
       $.argument_reference,
       $.number_literal,
       $.date_literal,
