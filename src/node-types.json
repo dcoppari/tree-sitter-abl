@@ -44117,6 +44117,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           }
@@ -44126,6 +44130,10 @@
         "multiple": true,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -44597,6 +44605,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           }
@@ -44772,6 +44784,10 @@
         "multiple": true,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -46574,6 +46590,10 @@
         "multiple": true,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -72354,6 +72374,10 @@
             "named": true
           },
           {
+            "type": "string_literal",
+            "named": true
+          },
+          {
             "type": "value_expression",
             "named": true
           }
@@ -89711,6 +89735,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           }
@@ -91088,6 +91116,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           }
@@ -91213,6 +91245,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true

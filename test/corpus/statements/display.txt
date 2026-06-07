@@ -516,3 +516,20 @@ DISPLAY (COUNT TOTAL BY region).
         operation: (aggregate_operation)
         (by_phrase
           group: (identifier))))))
+
+================================================================================
+DISPLAY with frame argument_reference
+================================================================================
+
+display wfield with frame {2} 1 down no-box.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (display_statement
+    record: (identifier)
+    (frame_phrase
+      frame: (argument_reference)
+      (down
+        value: (number_literal))
+      (no_box))))

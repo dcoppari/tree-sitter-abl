@@ -80,7 +80,7 @@ module.exports = ({ kw }) => ({
       seq(kw("FONT"), field("title_font", $.__frame_expression)),
     ),
   __frame_column_keyword: ($) => choice(kw("COLUMN"), kw("COLUMNS"), kw("COL")),
-  __frame_identifier: ($) => $.identifier,
+  __frame_identifier: ($) => choice($.identifier, $.argument_reference),
   __frame_expression: ($) => $._expression,
   __frame_down_value: ($) => seq(field("value", $.__frame_expression), kw("DOWN")),
   __frame_down_count: ($) =>
