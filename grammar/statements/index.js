@@ -18,6 +18,7 @@ module.exports = (ctx) => ({
   ...require("./clear")(ctx),
   ...require("./close-query")(ctx),
   ...require("./close-stored-procedure")(ctx),
+  ...require("./cursor")(ctx),
   ...require("./color")(ctx),
   ...require("./compile")(ctx),
   ...require("./connect")(ctx),

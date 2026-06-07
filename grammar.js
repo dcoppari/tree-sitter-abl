@@ -136,6 +136,12 @@ module.exports = grammar({
     // {1}.field (argument_qualified_name) vs {1}. (argument_reference + terminator):
     // both start with argument_reference; scanner resolves via NAMEDOT vs TERMINATOR_DOT.
     [$.argument_qualified_name, $.argument_reference],
+    // SQL cursor SELECT column list: expr can be a complete item or continue as binary_expression
+    [$.__sql_col_item, $.binary_expression],
+    // OPEN cursor-name. vs OPEN QUERY name ...: both start with OPEN; QUERY disambiguates
+    [$.open_cursor_statement, $.open_query_statement],
+    // CLOSE cursor-name. vs CLOSE QUERY name. and CLOSE STORED-PROCEDURE ...: QUERY/SP disambiguates
+    [$.close_cursor_statement, $.close_query_statement, $.close_stored_procedure_statement],
   ],
   inline: ($) => [
     $.__find_record_name,

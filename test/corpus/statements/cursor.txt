@@ -1,0 +1,116 @@
+================================================================================
+DECLARE CURSOR - Simple SELECT with WHERE clause
+================================================================================
+
+declare myRS cursor for
+    select max(regnro) + 1
+      from FACENCAB
+     where FACENCAB.siscod = wsiscod
+       and FACENCAB.regnpv = wnronpv.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (declare_cursor_statement
+    cursor: (identifier)
+    (identifier)
+    (binary_expression
+      (function_call
+        function: (identifier)
+        (arguments
+          (argument
+            name: (identifier))))
+      (number_literal))
+    from_table: (identifier)
+    where: (binary_expression
+      (binary_expression
+        (qualified_name
+          left: (identifier)
+          right: (identifier))
+        (identifier))
+      (binary_expression
+        (qualified_name
+          left: (identifier)
+          right: (identifier))
+        (identifier)))))
+
+================================================================================
+OPEN CURSOR - cursor form (no QUERY keyword)
+================================================================================
+
+open myRS.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (open_cursor_statement
+    cursor: (identifier)))
+
+================================================================================
+FETCH CURSOR - single variable
+================================================================================
+
+fetch myRS into lastNro.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (fetch_cursor_statement
+    cursor: (identifier)
+    variable: (identifier)))
+
+================================================================================
+CLOSE CURSOR - cursor form (no QUERY keyword)
+================================================================================
+
+close myRS.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (close_cursor_statement
+    cursor: (identifier)))
+
+================================================================================
+SQL CURSOR - full pattern: DECLARE OPEN REPEAT FETCH CLOSE
+================================================================================
+
+declare myRS cursor for
+    select max(regnro) + 1
+      from FACENCAB
+     where FACENCAB.siscod = wsiscod.
+
+open myRS.
+repeat:
+    fetch myRS into lastNro.
+end.
+close myRS.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (declare_cursor_statement
+    cursor: (identifier)
+    (identifier)
+    (binary_expression
+      (function_call
+        function: (identifier)
+        (arguments
+          (argument
+            name: (identifier))))
+      (number_literal))
+    from_table: (identifier)
+    where: (binary_expression
+      (qualified_name
+        left: (identifier)
+        right: (identifier))
+      (identifier)))
+  (open_cursor_statement
+    cursor: (identifier))
+  (repeat_statement
+    (body
+      (fetch_cursor_statement
+        cursor: (identifier)
+        variable: (identifier))))
+  (close_cursor_statement
+    cursor: (identifier)))
