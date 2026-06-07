@@ -116,6 +116,7 @@ module.exports = ({ kw }) => ({
       field("event", $.__on_database_event_name),
       kw("OF"),
       field("object", $._identifier_or_qualified_name),
+      optional(seq(kw("IN"), kw("FRAME"), field("frame", $.identifier))),
       optional(alias($.__on_referencing_phrase, $.referencing_phrase)),
       optional(alias(kw("OVERRIDE"), $.override)),
       choice($.__on_revert_action, $._statement),

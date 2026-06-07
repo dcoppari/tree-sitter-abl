@@ -56386,6 +56386,16 @@
           }
         ]
       },
+      "frame": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
       "function": {
         "multiple": false,
         "required": false,

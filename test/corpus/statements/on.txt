@@ -487,3 +487,21 @@ ON TAB ENDKEY.
   (on_statement
     event: (identifier)
     function: (key_function)))
+
+================================================================================
+ON database event OF table IN FRAME frame
+================================================================================
+
+on FIND of wTmpTxt in frame fEditor do:
+    next.
+end.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (on_statement
+    object: (identifier)
+    frame: (identifier)
+    (do_statement
+      (body
+        (next_statement)))))
