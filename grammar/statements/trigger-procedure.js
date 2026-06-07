@@ -20,7 +20,12 @@ module.exports = ({ kw }) => ({
         seq(
           kw("ASSIGN"),
           choice(
-            seq(kw("OF"), field("object", $.qualified_name)),
+            seq(
+              kw("OF"),
+              field("object", $.qualified_name),
+              optional($.__trigger_procedure_new_value),
+              optional($.__trigger_procedure_old_value),
+            ),
             seq($.__trigger_procedure_new_value, optional($.__trigger_procedure_old_value)),
           ),
         ),
@@ -41,9 +46,11 @@ module.exports = ({ kw }) => ({
     seq(
       optional(kw("VALUE")),
       field("value", $.identifier),
-      choice(
-        seq(kw("AS"), field("data_type", $.identifier)),
-        seq(kw("LIKE"), field("like_field", $.qualified_name)),
+      optional(
+        choice(
+          seq(kw("AS"), field("data_type", $.identifier)),
+          seq(kw("LIKE"), field("like_field", $.qualified_name)),
+        ),
       ),
       repeat($.__trigger_procedure_value_option),
     ),
