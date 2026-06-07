@@ -702,6 +702,35 @@ END.
           right: (identifier))))))
 
 ================================================================================
+FOR EACH with integer range (record phrase + loop variable without comma)
+================================================================================
+
+FOR EACH FSMIVAAL NO-LOCK
+    WHERE FSMIVAAL.ivacod = wivacod
+      wi = 1 TO 2:
+    MESSAGE wi.
+END.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (for_statement
+    (record_phrase
+      record: (identifier)
+      (no_lock)
+      where: (binary_expression
+        (qualified_name
+          left: (identifier)
+          right: (identifier))
+        (identifier)))
+    variable: (identifier)
+    start: (number_literal)
+    end: (number_literal)
+    (body
+      (message_statement
+        (identifier)))))
+
+================================================================================
 FOR EACH with argument reference (preprocessor positional arg as table name)
 ================================================================================
 
