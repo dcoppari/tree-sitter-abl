@@ -38,5 +38,6 @@ module.exports = ({ kw }) => ({
   __update_record: ($) => $._identifier_or_qualified_name,
   __update_field_target_item: ($) =>
     seq(field("field", $.__update_field_target), optional($.format_phrase)),
-  __update_field_target: ($) => choice(prec(1, $._identifier_or_qualified_name), $.array_access),
+  __update_field_target: ($) =>
+    choice(prec(1, $._identifier_or_qualified_name), $.array_access, $.argument_qualified_name, $.argument_reference),
 });
