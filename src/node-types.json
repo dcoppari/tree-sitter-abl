@@ -6417,6 +6417,28 @@
           }
         ]
       },
+      "color": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "INPUT",
+            "named": false
+          },
+          {
+            "type": "MESSAGES",
+            "named": false
+          },
+          {
+            "type": "NORMAL",
+            "named": false
+          },
+          {
+            "type": "color_phrase",
+            "named": true
+          }
+        ]
+      },
       "column": {
         "multiple": true,
         "required": false,
@@ -52069,6 +52091,16 @@
     "type": "input_expression",
     "named": true,
     "fields": {
+      "browse": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
       "field": {
         "multiple": false,
         "required": true,
