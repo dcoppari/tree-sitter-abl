@@ -43722,6 +43722,14 @@
         {
           "type": "SYMBOL",
           "name": "array_access"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "argument_qualified_name"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "argument_reference"
         }
       ]
     },

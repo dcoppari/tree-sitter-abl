@@ -690,3 +690,26 @@ WAIT-FOR CHOOSE OF cancel-butt OR WINDOW-CLOSE OF CURRENT-WINDOW.
       events: (identifier)
       widgets: (widget_phrase
         system_handle: (system_handle)))))
+
+================================================================================
+TEMP-TABLE field LIKE with preprocessor argument
+================================================================================
+
+define temp-table tp-param
+    field tparcla like {1}.parcla
+    field tparde1 like {1}
+    .
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (temp_table_definition
+    name: (identifier)
+    (temp_table_field
+      name: (identifier)
+      type: (argument_qualified_name
+        left: (argument_reference)
+        right: (identifier)))
+    (temp_table_field
+      name: (identifier)
+      type: (argument_reference))))

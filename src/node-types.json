@@ -36414,6 +36414,14 @@
         "required": false,
         "types": [
           {
+            "type": "argument_qualified_name",
+            "named": true
+          },
+          {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -53358,6 +53366,14 @@
         "required": true,
         "types": [
           {
+            "type": "argument_qualified_name",
+            "named": true
+          },
+          {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -53409,6 +53425,14 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_qualified_name",
+            "named": true
+          },
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -81447,6 +81471,14 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_qualified_name",
+            "named": true
+          },
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true

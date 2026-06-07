@@ -121,7 +121,8 @@ module.exports = ({ kw }) => ({
       seq(kw("XML-NODE-NAME"), field("xml_node_name", $.string_literal)),
     ),
   __temp_table_extent_option: ($) => seq(kw("EXTENT"), field("extent", $.number_literal)),
-  __temp_table_like_name: ($) => choice($._identifier_or_qualified_name, $.array_access),
+  __temp_table_like_name: ($) =>
+    choice($._identifier_or_qualified_name, $.array_access, $.argument_qualified_name, $.argument_reference),
   __temp_table_label_list: ($) => seq($.string_literal, repeat(seq(",", $.string_literal))),
   __temp_table_serialize_name_phrase: ($) =>
     seq(kw("SERIALIZE-NAME"), field("serialize_name", $.string_literal)),
