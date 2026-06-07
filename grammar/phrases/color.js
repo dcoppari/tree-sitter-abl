@@ -17,10 +17,6 @@ module.exports = ({ kw }) => ({
       ),
       $._value_expression,
       field("foreground", alias($.__color_prefixed_identifier, $.identifier)),
-      seq(
-        repeat1(choice(kw("BLINK-"), kw("BRIGHT-"), kw("RVV-"), kw("UNDERLINE-"))),
-        field("foreground", $.identifier),
-      ),
       $.identifier,
     ),
   __color_prefixed_identifier: ($) =>

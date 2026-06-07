@@ -91747,10 +91747,6 @@
     "named": false
   },
   {
-    "type": "BLINK-",
-    "named": false
-  },
-  {
     "type": "BLOCK-LEVEL",
     "named": false
   },
@@ -91764,10 +91760,6 @@
   },
   {
     "type": "BREAK",
-    "named": false
-  },
-  {
-    "type": "BRIGHT-",
     "named": false
   },
   {
@@ -93191,10 +93183,6 @@
     "named": false
   },
   {
-    "type": "RVV-",
-    "named": false
-  },
-  {
     "type": "SAFE",
     "named": false
   },
@@ -93568,10 +93556,6 @@
   },
   {
     "type": "UNDERLINE",
-    "named": false
-  },
-  {
-    "type": "UNDERLINE-",
     "named": false
   },
   {
