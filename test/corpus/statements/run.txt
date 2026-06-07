@@ -463,3 +463,25 @@ RUN x (INPUT oid_{&QXO-TABLE}).
     (arguments
       (argument
         name: (macro_concatenated_name)))))
+
+================================================================================
+RUN with positional arguments (4GL form)
+================================================================================
+
+RUN numeros.p n n n.
+RUN calc.p wsval "label".
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (run_statement
+    procedure: (procedure_name)
+    (positional_arguments
+      (identifier)
+      (identifier)
+      (identifier)))
+  (run_statement
+    procedure: (procedure_name)
+    (positional_arguments
+      (identifier)
+      (string_literal))))

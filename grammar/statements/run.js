@@ -25,6 +25,19 @@ module.exports = ({ kw }) => ({
     choice(
       seq(alias($.__run_asynchronous, $.asynchronous_phrase), optional($.arguments)),
       $.arguments,
+      alias(repeat1($.__run_positional_arg), $.positional_arguments),
+    ),
+
+  // Positional (4GL) args: non-parenthesized to avoid conflict with formal $.arguments.
+  // Uses _identifier_or_access_or_call which reuses the existing conflict declaration.
+  __run_positional_arg: ($) =>
+    choice(
+      $._identifier_or_access_or_call,
+      $.string_literal,
+      $.number_literal,
+      $.boolean_literal,
+      $.date_literal,
+      $.system_handle_identifier,
     ),
   __run_persistence: ($) =>
     choice(

@@ -490,17 +490,19 @@ module.exports = grammar({
       arguments: ($) => seq("(", optional($._argument_list), ")"),
       _argument_list: ($) => seq($.argument, repeat(seq(",", $.argument))),
       argument: ($) =>
-        seq(
-          optional(choice(kw("INPUT"), kw("OUTPUT"), kw("INPUT-OUTPUT"))),
-          choice(
-            seq(
-              choice(kw("TABLE"), kw("BUFFER"), kw("TABLE-HANDLE"), kw("DATASET-HANDLE")),
-              field("name", choice($._identifier_or_qualified_name, $.object_access)),
+        prec(1,
+          seq(
+            optional(choice(kw("INPUT"), kw("OUTPUT"), kw("INPUT-OUTPUT"))),
+            choice(
+              seq(
+                choice(kw("TABLE"), kw("BUFFER"), kw("TABLE-HANDLE"), kw("DATASET-HANDLE")),
+                field("name", choice($._identifier_or_qualified_name, $.object_access)),
+              ),
+              field("name", $._expression),
             ),
-            field("name", $._expression),
+            optional(seq(kw("AS"), field("type", $._type_name))),
+            optional(kw("BY-REFERENCE")),
           ),
-          optional(seq(kw("AS"), field("type", $._type_name))),
-          optional(kw("BY-REFERENCE")),
         ),
 
       function_call: ($) =>

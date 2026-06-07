@@ -37499,6 +37499,47 @@
         {
           "type": "SYMBOL",
           "name": "arguments"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "REPEAT1",
+            "content": {
+              "type": "SYMBOL",
+              "name": "__run_positional_arg"
+            }
+          },
+          "named": true,
+          "value": "positional_arguments"
+        }
+      ]
+    },
+    "__run_positional_arg": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_identifier_or_access_or_call"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string_literal"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number_literal"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "boolean_literal"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "date_literal"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "system_handle_identifier"
         }
       ]
     },
@@ -61783,208 +61824,212 @@
       ]
     },
     "argument": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "ALIAS",
-                  "content": {
-                    "type": "TOKEN",
+      "type": "PREC",
+      "value": 1,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "ALIAS",
                     "content": {
-                      "type": "PATTERN",
-                      "value": "INPUT",
-                      "flags": "i"
-                    }
+                      "type": "TOKEN",
+                      "content": {
+                        "type": "PATTERN",
+                        "value": "INPUT",
+                        "flags": "i"
+                      }
+                    },
+                    "named": false,
+                    "value": "INPUT"
                   },
-                  "named": false,
-                  "value": "INPUT"
-                },
-                {
-                  "type": "ALIAS",
-                  "content": {
-                    "type": "TOKEN",
+                  {
+                    "type": "ALIAS",
                     "content": {
-                      "type": "PATTERN",
-                      "value": "OUTPUT",
-                      "flags": "i"
-                    }
+                      "type": "TOKEN",
+                      "content": {
+                        "type": "PATTERN",
+                        "value": "OUTPUT",
+                        "flags": "i"
+                      }
+                    },
+                    "named": false,
+                    "value": "OUTPUT"
                   },
-                  "named": false,
-                  "value": "OUTPUT"
-                },
-                {
-                  "type": "ALIAS",
-                  "content": {
-                    "type": "TOKEN",
+                  {
+                    "type": "ALIAS",
                     "content": {
-                      "type": "PATTERN",
-                      "value": "INPUT-OUTPUT",
-                      "flags": "i"
-                    }
-                  },
-                  "named": false,
-                  "value": "INPUT-OUTPUT"
-                }
-              ]
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "ALIAS",
+                      "type": "TOKEN",
                       "content": {
-                        "type": "TOKEN",
-                        "content": {
-                          "type": "PATTERN",
-                          "value": "TABLE",
-                          "flags": "i"
-                        }
-                      },
-                      "named": false,
-                      "value": "TABLE"
+                        "type": "PATTERN",
+                        "value": "INPUT-OUTPUT",
+                        "flags": "i"
+                      }
                     },
-                    {
-                      "type": "ALIAS",
-                      "content": {
-                        "type": "TOKEN",
-                        "content": {
-                          "type": "PATTERN",
-                          "value": "BUFFER",
-                          "flags": "i"
-                        }
-                      },
-                      "named": false,
-                      "value": "BUFFER"
-                    },
-                    {
-                      "type": "ALIAS",
-                      "content": {
-                        "type": "TOKEN",
-                        "content": {
-                          "type": "PATTERN",
-                          "value": "TABLE-HANDLE",
-                          "flags": "i"
-                        }
-                      },
-                      "named": false,
-                      "value": "TABLE-HANDLE"
-                    },
-                    {
-                      "type": "ALIAS",
-                      "content": {
-                        "type": "TOKEN",
-                        "content": {
-                          "type": "PATTERN",
-                          "value": "DATASET-HANDLE",
-                          "flags": "i"
-                        }
-                      },
-                      "named": false,
-                      "value": "DATASET-HANDLE"
-                    }
-                  ]
-                },
-                {
-                  "type": "FIELD",
-                  "name": "name",
-                  "content": {
+                    "named": false,
+                    "value": "INPUT-OUTPUT"
+                  }
+                ]
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SEQ",
+                "members": [
+                  {
                     "type": "CHOICE",
                     "members": [
                       {
-                        "type": "SYMBOL",
-                        "name": "_identifier_or_qualified_name"
+                        "type": "ALIAS",
+                        "content": {
+                          "type": "TOKEN",
+                          "content": {
+                            "type": "PATTERN",
+                            "value": "TABLE",
+                            "flags": "i"
+                          }
+                        },
+                        "named": false,
+                        "value": "TABLE"
                       },
                       {
-                        "type": "SYMBOL",
-                        "name": "object_access"
+                        "type": "ALIAS",
+                        "content": {
+                          "type": "TOKEN",
+                          "content": {
+                            "type": "PATTERN",
+                            "value": "BUFFER",
+                            "flags": "i"
+                          }
+                        },
+                        "named": false,
+                        "value": "BUFFER"
+                      },
+                      {
+                        "type": "ALIAS",
+                        "content": {
+                          "type": "TOKEN",
+                          "content": {
+                            "type": "PATTERN",
+                            "value": "TABLE-HANDLE",
+                            "flags": "i"
+                          }
+                        },
+                        "named": false,
+                        "value": "TABLE-HANDLE"
+                      },
+                      {
+                        "type": "ALIAS",
+                        "content": {
+                          "type": "TOKEN",
+                          "content": {
+                            "type": "PATTERN",
+                            "value": "DATASET-HANDLE",
+                            "flags": "i"
+                          }
+                        },
+                        "named": false,
+                        "value": "DATASET-HANDLE"
                       }
                     ]
-                  }
-                }
-              ]
-            },
-            {
-              "type": "FIELD",
-              "name": "name",
-              "content": {
-                "type": "SYMBOL",
-                "name": "_expression"
-              }
-            }
-          ]
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "ALIAS",
-                  "content": {
-                    "type": "TOKEN",
-                    "content": {
-                      "type": "PATTERN",
-                      "value": "AS",
-                      "flags": "i"
-                    }
                   },
-                  "named": false,
-                  "value": "AS"
-                },
-                {
-                  "type": "FIELD",
-                  "name": "type",
-                  "content": {
-                    "type": "SYMBOL",
-                    "name": "_type_name"
+                  {
+                    "type": "FIELD",
+                    "name": "name",
+                    "content": {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "_identifier_or_qualified_name"
+                        },
+                        {
+                          "type": "SYMBOL",
+                          "name": "object_access"
+                        }
+                      ]
+                    }
                   }
-                }
-              ]
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "ALIAS",
-              "content": {
-                "type": "TOKEN",
-                "content": {
-                  "type": "PATTERN",
-                  "value": "BY-REFERENCE",
-                  "flags": "i"
-                }
+                ]
               },
-              "named": false,
-              "value": "BY-REFERENCE"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        }
-      ]
+              {
+                "type": "FIELD",
+                "name": "name",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_expression"
+                }
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "ALIAS",
+                    "content": {
+                      "type": "TOKEN",
+                      "content": {
+                        "type": "PATTERN",
+                        "value": "AS",
+                        "flags": "i"
+                      }
+                    },
+                    "named": false,
+                    "value": "AS"
+                  },
+                  {
+                    "type": "FIELD",
+                    "name": "type",
+                    "content": {
+                      "type": "SYMBOL",
+                      "name": "_type_name"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "ALIAS",
+                "content": {
+                  "type": "TOKEN",
+                  "content": {
+                    "type": "PATTERN",
+                    "value": "BY-REFERENCE",
+                    "flags": "i"
+                  }
+                },
+                "named": false,
+                "value": "BY-REFERENCE"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          }
+        ]
+      }
     },
     "function_call": {
       "type": "SEQ",
