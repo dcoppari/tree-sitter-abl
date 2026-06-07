@@ -140,6 +140,22 @@ DELETE WIDGET-POOL wp.
     pool: (identifier)))
 
 ================================================================================
+DELETE with argument reference (preprocessor positional arg as record name)
+================================================================================
+
+DELETE {1}.
+DELETE {2} NO-ERROR.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (delete_statement
+    record: (argument_reference))
+  (delete_statement
+    record: (argument_reference)
+    (no_error)))
+
+================================================================================
 DELETE - Reference snippets
 ================================================================================
 

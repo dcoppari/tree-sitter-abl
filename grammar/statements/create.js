@@ -81,7 +81,7 @@ module.exports = ({ kw }) => ({
     ),
   __create_record: ($) =>
     seq(
-      field("table", choice($._identifier_or_qualified_name, $.preprocessor_name)),
+      field("table", choice($._identifier_or_qualified_name, $.preprocessor_name, $.argument_reference)),
       optional(seq(kw("FOR"), kw("TENANT"), field("tenant", $._expression))),
       optional(
         seq(

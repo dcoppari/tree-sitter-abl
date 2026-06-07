@@ -40,6 +40,6 @@ module.exports = ({ kw }) => ({
 
   __find_of_phrase: ($) => seq(kw("OF"), field("record", $.__find_record_name)),
   __find_where_phrase: ($) => seq(kw("WHERE"), field("where", $._expression)),
-  __find_record_name: ($) => $._identifier_or_qualified_name,
+  __find_record_name: ($) => choice($._identifier_or_qualified_name, $.argument_reference),
   __find_index_name: ($) => $._identifier_or_qualified_name,
 });

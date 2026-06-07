@@ -12515,6 +12515,10 @@
               {
                 "type": "SYMBOL",
                 "name": "preprocessor_name"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "argument_reference"
               }
             ]
           }
@@ -14942,8 +14946,17 @@
           "type": "FIELD",
           "name": "record",
           "content": {
-            "type": "SYMBOL",
-            "name": "_identifier_or_qualified_name"
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_identifier_or_qualified_name"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "argument_reference"
+              }
+            ]
           }
         },
         {
@@ -18828,8 +18841,17 @@
       ]
     },
     "__find_record_name": {
-      "type": "SYMBOL",
-      "name": "_identifier_or_qualified_name"
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_identifier_or_qualified_name"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "argument_reference"
+        }
+      ]
     },
     "__find_index_name": {
       "type": "SYMBOL",
