@@ -518,3 +518,28 @@ on tab editor-tab.
   (on_statement
     event: (identifier)
     function: (key_function)))
+
+================================================================================
+ON event OF argument_reference IN FRAME argument_reference
+================================================================================
+
+on return of {4} in frame {1} do:
+  assign a = b.
+end.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (on_statement
+    event: (identifier)
+    (of_phrase
+      widget: (widget_phrase
+        field: (argument_reference)
+        frame: (argument_reference)))
+    (do_statement
+      (body
+        (assign_statement
+          (assign_phrase
+            (assign_pair
+              left: (identifier)
+              right: (identifier))))))))

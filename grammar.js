@@ -544,7 +544,7 @@ module.exports = grammar({
           ),
           kw("IN"),
           $._widgets,
-          field("widget", $.identifier),
+          field("widget", choice($.identifier, $.argument_reference)),
         ),
 
       _window_handle: ($) =>

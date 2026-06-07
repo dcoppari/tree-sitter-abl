@@ -18,8 +18,8 @@ module.exports = ({ kw }) => ({
     choice(
       seq(
         optional(kw("FIELD")),
-        field("field", $._identifier_or_array_access),
-        optional(seq(kw("IN"), kw("FRAME", { offset: 3 }), field("frame", $.identifier))),
+        field("field", choice($._identifier_or_array_access, $.argument_reference)),
+        optional(seq(kw("IN"), kw("FRAME", { offset: 3 }), field("frame", choice($.identifier, $.argument_reference)))),
       ),
       seq(
         field("column", $._identifier_or_array_access),

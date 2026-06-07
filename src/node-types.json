@@ -91094,6 +91094,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -91224,6 +91228,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -91351,6 +91359,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true

@@ -550,3 +550,22 @@ ASSIGN BROWSE b1:CURRENT-ROW = 1.
         browse: (identifier)
         attr: (identifier)
         right: (number_literal)))))
+
+================================================================================
+ASSIGN object_access in frame argument_reference
+================================================================================
+
+assign x:list-items in frame {1} = wTmp.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (assign_statement
+    (assign_phrase
+      (assign_pair
+        left: (widget_qualified_name
+          target: (object_access
+            left: (identifier)
+            right: (identifier))
+          widget: (argument_reference))
+        right: (identifier)))))
