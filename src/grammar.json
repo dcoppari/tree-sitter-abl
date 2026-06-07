@@ -61326,6 +61326,10 @@
                   {
                     "type": "SYMBOL",
                     "name": "new_expression"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "array_access"
                   }
                 ]
               }
@@ -64934,6 +64938,10 @@
     [
       "__on_key_label",
       "__on_ui_event"
+    ],
+    [
+      "__browse_enable_field",
+      "_array_target"
     ]
   ],
   "precedences": [

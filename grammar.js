@@ -130,6 +130,9 @@ module.exports = grammar({
     // ON TAB TAB. vs ON TAB OF widget: both start with a UI event name token.
     // Requires runtime dispatch since disambiguation needs 2-token lookahead.
     [$.__on_key_label, $.__on_ui_event],
+    // array_access as left of object_access: campo[n]:attr can be parsed as
+    // browse_enable_field starting with _identifier_or_qualified_name or as _array_target.
+    [$.__browse_enable_field, $._array_target],
   ],
   inline: ($) => [
     $.__find_record_name,
@@ -431,7 +434,7 @@ module.exports = grammar({
           $._object_access_handle,
           $._object_access_plain,
           seq(
-            field("left", choice($.function_call, $.parenthesized_expression, $.new_expression)),
+            field("left", choice($.function_call, $.parenthesized_expression, $.new_expression, $.array_access)),
             $._object_access_tail,
           ),
         ),
