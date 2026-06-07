@@ -12049,6 +12049,10 @@
         {
           "type": "no_focus",
           "named": true
+        },
+        {
+          "type": "trigger_phrase",
+          "named": true
         }
       ]
     }

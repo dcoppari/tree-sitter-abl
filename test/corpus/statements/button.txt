@@ -479,3 +479,27 @@ DEFINE BUTTONS btn1.
 (source_code
   (button_definition
     name: (identifier)))
+
+================================================================================
+DEFINE BUTTON with TRIGGERS block
+================================================================================
+
+DEFINE BUTTON btsalir LABEL 'Salida'
+    TRIGGERS:
+        ON CHOOSE
+            DO:
+                APPLY "end-error".
+            END.
+    END TRIGGERS.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (button_definition
+    name: (identifier)
+    label: (string_literal)
+    (trigger_phrase
+      event: (identifier)
+      (trigger_body
+        (apply_statement
+          event: (string_literal))))))

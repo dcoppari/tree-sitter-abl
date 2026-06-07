@@ -5500,6 +5500,18 @@
             "type": "SYMBOL",
             "name": "__button_option"
           }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "trigger_phrase"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },

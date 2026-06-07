@@ -8,7 +8,8 @@ module.exports = ({ kw }) => ({
       $._terminator,
     ),
 
-  __button_body: ($) => seq(field("name", $.identifier), repeat($.__button_option)),
+  __button_body: ($) =>
+    seq(field("name", $.identifier), repeat($.__button_option), optional($.trigger_phrase)),
 
   __button_option: ($) =>
     choice(
