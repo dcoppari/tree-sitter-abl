@@ -209,3 +209,23 @@ DISPLAY x WITH FRAME f COLOR DISPLAY VALUE(5) PROMPT VALUE(3).
         value: (number_literal))
       prompt_color: (color_phrase
         value: (number_literal)))))
+
+================================================================================
+FORM with double WITH (duplicate WITH before frame name)
+================================================================================
+
+form a b
+  with
+  with frame fr1 no-box.
+
+---
+
+(source_code
+  (form_statement
+    (form_item
+      field: (identifier))
+    (form_item
+      field: (identifier))
+    (frame_phrase
+      frame: (identifier)
+      (no_box))))

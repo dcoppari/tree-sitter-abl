@@ -2,6 +2,7 @@ module.exports = ({ kw }) => ({
   frame_phrase: ($) =>
     seq(
       prec(1, kw("WITH")),
+      optional(kw("WITH")),
       repeat1(
         choice(
           $.at_phrase,
