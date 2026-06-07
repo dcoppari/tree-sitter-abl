@@ -181,10 +181,12 @@ module.exports = ({ kw }) => ({
       kw("SCROLL-MODE"),
       kw("STOP"),
       kw("TAB"),
+      kw("EDITOR-TAB"),
     ),
   __on_ui_key_function: ($) =>
     choice(
       kw("BACK-TAB"),
+      kw("EDITOR-TAB"),
       kw("END-ERROR"),
       kw("ENDKEY"),
       kw("GO"),

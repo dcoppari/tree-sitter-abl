@@ -28072,6 +28072,19 @@
           },
           "named": false,
           "value": "TAB"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "TOKEN",
+            "content": {
+              "type": "PATTERN",
+              "value": "EDITOR-TAB",
+              "flags": "i"
+            }
+          },
+          "named": false,
+          "value": "EDITOR-TAB"
         }
       ]
     },
@@ -28090,6 +28103,19 @@
           },
           "named": false,
           "value": "BACK-TAB"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "TOKEN",
+            "content": {
+              "type": "PATTERN",
+              "value": "EDITOR-TAB",
+              "flags": "i"
+            }
+          },
+          "named": false,
+          "value": "EDITOR-TAB"
         },
         {
           "type": "ALIAS",
