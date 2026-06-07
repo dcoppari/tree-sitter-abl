@@ -80,6 +80,7 @@ module.exports = ({ kw }) => ({
       alias(kw("DROP-TARGET"), $.drop_target),
       seq(kw("TOOLTIP"), field("tooltip", $.__browse_option_expression)),
       seq(kw("BGCOLOR"), field("bgcolor", $.__browse_option_expression)),
+      seq(kw("COLOR"), field("color", $.__browse_color_value)),
       seq(kw("DCOLOR"), field("dcolor", $.__browse_option_expression)),
       seq(kw("FGCOLOR"), field("fgcolor", $.__browse_option_expression)),
       seq(kw("FONT"), field("font", $.__browse_option_expression)),
@@ -162,6 +163,7 @@ module.exports = ({ kw }) => ({
       optional(seq("[", optional($._array_subscript), "]")),
       repeat($.format_phrase),
     ),
+  __browse_color_value: ($) => choice(kw("NORMAL"), kw("INPUT"), kw("MESSAGES"), $.color_phrase),
   __browse_title_option: ($) => $._frame_title_option,
   __browse_modifier: ($) =>
     choice(

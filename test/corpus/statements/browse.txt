@@ -830,3 +830,23 @@ DEFINE BROWSE b1 QUERY q1 DISPLAY Name WITH COL 20.
     (column
       column: (identifier))
     column: (number_literal)))
+
+================================================================================
+DEFINE BROWSE with legacy COLOR option
+================================================================================
+
+define browse wBrw query wQ display f1
+  with 10 down no-label color MESSAGE.
+
+---
+
+(source_code
+  (browse_definition
+    name: (identifier)
+    query: (identifier)
+    (column
+      column: (identifier))
+    down: (number_literal)
+    (no_labels)
+    color: (color_phrase
+      (identifier))))
