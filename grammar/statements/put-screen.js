@@ -18,6 +18,12 @@ module.exports = ({ kw }) => ({
           seq(kw("ROW"), field("row", $._expression)),
           optional(seq(choice(kw("COLUMN"), kw("COL")), field("column", $._expression))),
         ),
+        // Orden legacy: value COL [ROW]  (COL requerido para desambiguar)
+        seq(
+          field("value", $._expression),
+          seq(choice(kw("COLUMN"), kw("COL")), field("column", $._expression)),
+          optional(seq(kw("ROW"), field("row", $._expression))),
+        ),
       ),
     ),
 
