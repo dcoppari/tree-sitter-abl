@@ -7,7 +7,7 @@ module.exports = ({ kw }) => ({
       choice(
         seq(
           alias(kw("ALL"), $.all),
-          optional(seq(kw("EXCEPT"), repeat1(field("except", $._identifier_or_access)))),
+          optional(seq(kw("EXCEPT"), repeat(field("except", $._identifier_or_access)))),
         ),
         repeat1(alias($.__enable_item, $.enable_item)),
       ),

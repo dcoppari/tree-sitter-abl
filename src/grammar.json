@@ -17207,7 +17207,7 @@
                           "value": "EXCEPT"
                         },
                         {
-                          "type": "REPEAT1",
+                          "type": "REPEAT",
                           "content": {
                             "type": "FIELD",
                             "name": "except",
