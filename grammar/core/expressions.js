@@ -27,6 +27,7 @@ module.exports = ({ kw, ctx }) => ({
       $.seek_expression,
       $.function_call,
       $.array_access,
+      $.argument_array_access,
       $.scoped_name,
       $.object_access,
       $.argument_qualified_name,

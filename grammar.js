@@ -492,6 +492,17 @@ module.exports = grammar({
           seq(field("start", $._expression), kw("FOR"), field("count", $._expression)),
         ),
 
+      // Array subscript where the base is a preprocessor argument reference.
+      // Kept separate from array_access (which goes through _assignable) so that
+      // bare argument_reference tokens remain consumable as extras at statement level.
+      argument_array_access: ($) =>
+        seq(
+          field("array", choice($.argument_reference, $.argument_qualified_name)),
+          "[",
+          field("index", optional($._array_subscript)),
+          "]",
+        ),
+
       // Callables
       arguments: ($) => seq("(", optional($._argument_list), ")"),
       _argument_list: ($) => seq($.argument, repeat(seq(",", $.argument))),
