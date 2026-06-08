@@ -63613,6 +63613,19 @@
           }
         },
         {
+          "type": "FIELD",
+          "name": "command_token",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_dos_unix_rel_path"
+            },
+            "named": true,
+            "value": "raw_token"
+          }
+        },
+        {
           "type": "SEQ",
           "members": [
             {
@@ -63652,7 +63665,7 @@
       "type": "TOKEN",
       "content": {
         "type": "PATTERN",
-        "value": "[-]{1,2}[^\\s.]+|>{1,2}|<[^{]"
+        "value": "[-]{1,2}[^\\s.]+|>{1,2}|\\d+>{1,2}|<[^{]|\\.{1,2}\\/[^\\s.]*(?:\\.[^\\s.]+)*|\\/[^\\s.][^\\s.]*(?:\\.[^\\s.]+)*|,"
       }
     },
     "_dos_unix_tail": {
@@ -66767,6 +66780,10 @@
     {
       "type": "SYMBOL",
       "name": "block_comment"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "_dos_unix_rel_path"
     }
   ],
   "inline": [

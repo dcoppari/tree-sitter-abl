@@ -72,6 +72,7 @@ module.exports = grammar({
     $._terminator_dot,
     $._escaped_string,
     $.block_comment,
+    $._dos_unix_rel_path,
   ],
   extras: ($) => [
     /[\s\f\uFEFF\u2060\u200B]|\\\r?\n|~[ \t]*/,

@@ -49,11 +49,17 @@ module.exports = ({ kw }) => ({
       field("command_token", $.string_literal),
       field("command_token", $.number_literal),
       field("command_token", alias($.__dos_unix_raw_token, $.raw_token)),
+      field("command_token", alias($._dos_unix_rel_path, $.raw_token)),
       seq(kw("VALUE"), "(", field("command", $._expression), ")"),
     ),
-  // Matches Unix-style flags (-q, --verbose), redirects (>, >>, <), and
-  // other shell tokens that are not ABL identifiers or string literals.
-  __dos_unix_raw_token: () => token(/[-]{1,2}[^\s.]+|>{1,2}|<[^{]/),
+  // Matches shell tokens not representable as ABL identifiers or string literals:
+  // flags (-q, --verbose), redirects (>, >>, <, 2>), paths (./p, ../p, /abs/p),
+  // and comma separators. Path patterns use [^\s.]+ segments to avoid consuming
+  // the trailing statement-terminator dot.
+  __dos_unix_raw_token: () =>
+    token(
+      /[-]{1,2}[^\s.]+|>{1,2}|\d+>{1,2}|<[^{]|\.{1,2}\/[^\s.]*(?:\.[^\s.]+)*|\/[^\s.][^\s.]*(?:\.[^\s.]+)*|,/,
+    ),
   _dos_unix_tail: ($) =>
     choice(
       seq(alias(kw("SILENT"), $.silent), repeat($._dos_unix_command)),

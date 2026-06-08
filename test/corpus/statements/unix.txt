@@ -150,3 +150,63 @@ UNIX SILENT VALUE(search("quoter")) ASCCTACT > ctacte.q.
     command_token: (qualified_name
       left: (identifier)
       right: (identifier))))
+
+================================================================================
+UNIX - relative path redirect target
+================================================================================
+
+UNIX SILENT VALUE(search("quoter")) ../datos/muni.txt > muni.q.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (unix_statement
+    (silent)
+    command: (function_call
+      function: (identifier)
+      (arguments
+        (argument
+          name: (string_literal))))
+    command_token: (raw_token)
+    command_token: (raw_token)
+    command_token: (qualified_name
+      left: (identifier)
+      right: (identifier))))
+
+================================================================================
+UNIX - absolute path arguments
+================================================================================
+
+UNIX SILENT rm /us1/pro/cct/cctayu90.p.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (unix_statement
+    (silent)
+    command_token: (identifier)
+    command_token: (raw_token)))
+
+================================================================================
+UNIX - comma separator and absolute path
+================================================================================
+
+UNIX VALUE(search("quoter")) -d , /us1/pro/cct/CCTCUENT.DAT > prueba.q.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (unix_statement
+    command: (function_call
+      function: (identifier)
+      (arguments
+        (argument
+          name: (string_literal))))
+    command_token: (raw_token)
+    command_token: (raw_token)
+    command_token: (raw_token)
+    command_token: (raw_token)
+    command_token: (qualified_name
+      left: (identifier)
+      right: (identifier))))
+

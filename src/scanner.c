@@ -9,7 +9,8 @@ enum TokenType {
   COLON,
   TERMINATOR_DOT,
   ESCAPED_STRING,
-  BLOCK_COMMENT
+  BLOCK_COMMENT,
+  DOS_UNIX_REL_PATH
 };
 
 void *tree_sitter_abl_external_scanner_create() {
@@ -54,6 +55,21 @@ bool tree_sitter_abl_external_scanner_scan(
       if ((iswalpha(lexer->lookahead) || lexer->lookahead == '_') && valid_symbols[NAMEDOT]) {
         lexer->result_symbol = NAMEDOT;
         return true;
+      }
+
+      // '.' followed by '/' is a shell relative path start (./path).
+      // Prioritise DOS_UNIX_REL_PATH over TERMINATOR_DOT so the full path is consumed.
+      if (valid_symbols[DOS_UNIX_REL_PATH] && lexer->lookahead == '/') {
+        goto scan_rel_path;
+      }
+
+      // '.' followed by another '.' — check for '../path' relative path.
+      if (valid_symbols[DOS_UNIX_REL_PATH] && lexer->lookahead == '.') {
+        lexer->advance(lexer, false);
+        if (lexer->lookahead == '/') {
+          goto scan_rel_path;
+        }
+        // '..' not followed by '/' — fall through to TERMINATOR_DOT
       }
 
       // When '.' is not followed by alpha, it cannot be a NAMEDOT regardless of valid_symbols.
@@ -143,6 +159,16 @@ bool tree_sitter_abl_external_scanner_scan(
           lexer->result_symbol = NAMEDOT;
           return true;
         }
+        // Check for ./path and ../path before returning TERMINATOR_DOT.
+        if (valid_symbols[DOS_UNIX_REL_PATH] && lexer->lookahead == '/') {
+          goto scan_rel_path;
+        }
+        if (valid_symbols[DOS_UNIX_REL_PATH] && lexer->lookahead == '.') {
+          lexer->advance(lexer, false);
+          if (lexer->lookahead == '/') {
+            goto scan_rel_path;
+          }
+        }
         if (valid_symbols[TERMINATOR_DOT]) {
           lexer->result_symbol = TERMINATOR_DOT;
           return true;
@@ -231,4 +257,36 @@ bool tree_sitter_abl_external_scanner_scan(
   }
 
   return false;
+
+  // Scan shell relative paths (./path or ../path) for UNIX/DOS statements.
+  // Reached via goto from the '.' block above after confirming './' or '../' prefix.
+  // The cursor is already past '.' (and a second '.' for '../'); lookahead is '/'.
+  scan_rel_path: {
+    // Advance past '/'
+    lexer->advance(lexer, false);
+
+    // Scan the path body. A lone '.' followed by whitespace/EOF/')' is the
+    // statement terminator — stop before it. Mid-path dots (extensions) are included.
+    while (!lexer->eof(lexer)) {
+      if (iswspace(lexer->lookahead) || lexer->lookahead == ')') {
+        break;
+      }
+      if (lexer->lookahead == '.') {
+        // Save position before '.' as candidate end-of-token
+        lexer->mark_end(lexer);
+        lexer->advance(lexer, false);
+        if (lexer->eof(lexer) || iswspace(lexer->lookahead) || lexer->lookahead == ')') {
+          // '.' is the statement terminator — token ends before it
+          lexer->result_symbol = DOS_UNIX_REL_PATH;
+          return true;
+        }
+        // '.' is a path separator (file extension) — continue scanning
+        continue;
+      }
+      lexer->advance(lexer, false);
+    }
+    lexer->mark_end(lexer);
+    lexer->result_symbol = DOS_UNIX_REL_PATH;
+    return true;
+  }
 }
