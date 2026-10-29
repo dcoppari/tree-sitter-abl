@@ -39,5 +39,6 @@ export default ({ kw }) => ({
           ),
         ),
       ),
+      optional($.trigger_phrase),
     ),
 });
