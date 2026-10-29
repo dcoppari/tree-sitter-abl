@@ -22,7 +22,11 @@ export default ({ kw }) => ({
         seq(
           $._kw_assign,
           choice(
-            seq($._kw_of, field("object", $.qualified_name)),
+            seq(
+              $._kw_of,
+              field("object", $.qualified_name),
+              optional(seq($._kw_old, $.__trigger_procedure_value_body)),
+            ),
             seq(
               seq($._kw_new, $.__trigger_procedure_value_body),
               optional(seq($._kw_old, $.__trigger_procedure_value_body)),
@@ -40,9 +44,11 @@ export default ({ kw }) => ({
     seq(
       optional($._kw_value),
       field("value", $.identifier),
-      choice(
-        seq($._kw_as, field("data_type", $.identifier)),
-        seq($._kw_like, field("like_field", $.qualified_name)),
+      optional(
+        choice(
+          seq($._kw_as, field("data_type", $.identifier)),
+          seq($._kw_like, field("like_field", $.qualified_name)),
+        ),
       ),
       optional($.__trigger_procedure_options),
     ),
