@@ -26,7 +26,26 @@ export default ({ kw }) => ({
         optional(seq($.arguments, optional($.__run_surplus_tail))),
       ),
       seq($.arguments, optional($.__run_surplus_tail)),
+      alias($.__run_positional_arguments, $.positional_arguments),
     ),
+  // Legacy compile-time arguments, unparenthesized: RUN p.p a "b" f(c).
+  __run_positional_arguments: ($) =>
+    prec.right(seq($.__run_positional_argument, optional($.__run_positional_arguments))),
+  // Right associativity: a name followed by "(" is a call, not two arguments.
+  __run_positional_argument: ($) =>
+    prec.right(
+      choice(
+        $._qualified_identifier,
+        alias($.__run_positional_call, $.function_call),
+        $.string_literal,
+        $.number_literal,
+        $.boolean_literal,
+        $.date_literal,
+      ),
+    ),
+  // Plain name calls only: a general function_call may start with "(", which
+  // would read RUN p (x) as a positional argument instead of the argument list.
+  __run_positional_call: ($) => seq(field("function", $._qualified_identifier), $.arguments),
   // RUN tolerates what no other statement does: `RUN pr (1,2,3)).` and
   // `RUN pr (1,2,3) (4).` both compile, and so does a second surplus closing
   // parenthesis. A surplus *opening* one is refused -- error 247 -- and so is
