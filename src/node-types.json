@@ -507,6 +507,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -688,6 +692,10 @@
             "named": false
           },
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -810,6 +818,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -877,6 +889,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -1096,6 +1112,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -1717,6 +1737,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -1741,6 +1765,10 @@
           {
             "type": "FRAME",
             "named": false
+          },
+          {
+            "type": "argument_reference",
+            "named": true
           },
           {
             "type": "array_access",
@@ -2114,6 +2142,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -2156,6 +2188,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -2169,6 +2205,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -2476,6 +2516,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -2638,6 +2682,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -2848,6 +2896,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -3150,6 +3202,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -4454,6 +4510,10 @@
             "named": false
           },
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -4477,6 +4537,10 @@
       "multiple": false,
       "required": false,
       "types": [
+        {
+          "type": "argument_reference",
+          "named": true
+        },
         {
           "type": "identifier",
           "named": true
@@ -5786,6 +5850,16 @@
           }
         ]
       },
+      "color": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "color_phrase",
+            "named": true
+          }
+        ]
+      },
       "column": {
         "multiple": true,
         "required": false,
@@ -6728,6 +6802,10 @@
         "multiple": true,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -9765,6 +9843,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -10087,6 +10169,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -10104,6 +10190,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -10228,6 +10318,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -11608,6 +11702,10 @@
         {
           "type": "no_focus",
           "named": true
+        },
+        {
+          "type": "trigger_phrase",
+          "named": true
         }
       ]
     }
@@ -11755,6 +11853,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -11831,6 +11933,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -11848,6 +11954,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -13613,6 +13723,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -13656,6 +13770,10 @@
         "multiple": true,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -14119,6 +14237,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -14190,6 +14312,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -14208,6 +14334,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -14225,6 +14355,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -15000,6 +15134,10 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "argument_reference",
+          "named": true
+        },
         {
           "type": "display",
           "named": true
@@ -21577,6 +21715,10 @@
             "named": true
           },
           {
+            "type": "opsys_file",
+            "named": true
+          },
+          {
             "type": "string_literal",
             "named": true
           }
@@ -21812,6 +21954,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -21979,6 +22125,10 @@
         "multiple": true,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -23478,6 +23628,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -23503,6 +23657,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -24234,6 +24392,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -24718,6 +24880,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -24759,6 +24925,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -24962,6 +25132,10 @@
             "named": false
           },
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -25068,6 +25242,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -25085,6 +25263,10 @@
         "multiple": true,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -25882,6 +26064,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -26332,6 +26518,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -26623,6 +26813,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -27426,6 +27620,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -27898,6 +28096,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -28177,6 +28379,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -28405,6 +28611,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -28589,6 +28799,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -28621,6 +28835,14 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
+            "type": "array_access",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -28638,6 +28860,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -29887,7 +30113,31 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "macro_concatenated_name",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "opsys_file",
+            "named": true
+          },
+          {
+            "type": "qualified_name",
+            "named": true
+          },
+          {
+            "type": "shell_token",
             "named": true
           },
           {
@@ -30241,6 +30491,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -30270,6 +30524,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -30452,6 +30710,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -31654,6 +31916,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -31830,6 +32096,14 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
+            "type": "array_access",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -31880,7 +32154,19 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "macro_concatenated_name",
+            "named": true
+          },
+          {
+            "type": "qualified_name",
             "named": true
           }
         ]
@@ -32025,6 +32311,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "argument_reference",
+          "named": true
+        },
         {
           "type": "identifier",
           "named": true
@@ -32212,6 +32502,10 @@
         },
         {
           "type": "ambiguous_expression",
+          "named": true
+        },
+        {
+          "type": "argument_reference",
           "named": true
         },
         {
@@ -32431,6 +32725,10 @@
         "multiple": true,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -33958,6 +34256,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -34295,6 +34597,10 @@
           "named": true
         },
         {
+          "type": "argument_reference",
+          "named": true
+        },
+        {
           "type": "at_phrase",
           "named": true
         },
@@ -34492,6 +34798,10 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "argument_reference",
+          "named": true
+        },
         {
           "type": "identifier",
           "named": true
@@ -34949,6 +35259,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -34966,6 +35280,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -35329,6 +35647,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -35368,6 +35690,10 @@
         "multiple": true,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -35891,6 +36217,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -36200,6 +36530,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -38077,6 +38411,10 @@
         "multiple": true,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -40200,6 +40538,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -40356,6 +40698,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -40503,6 +40849,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -42025,6 +42375,10 @@
         "multiple": true,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -43977,6 +44331,10 @@
           {
             "type": "COUNT",
             "named": false
+          },
+          {
+            "type": "argument_reference",
+            "named": true
           },
           {
             "type": "identifier",
@@ -48282,6 +48640,10 @@
       "required": true,
       "types": [
         {
+          "type": "argument_reference",
+          "named": true
+        },
+        {
           "type": "delimiter_phrase",
           "named": true
         },
@@ -48628,6 +48990,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "function_call",
             "named": true
           },
@@ -48889,6 +49255,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -49114,6 +49484,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -49139,6 +49513,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -49517,6 +49895,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -49943,6 +50325,10 @@
       "required": false,
       "types": [
         {
+          "type": "argument_reference",
+          "named": true
+        },
+        {
           "type": "convert_phrase",
           "named": true
         },
@@ -50019,6 +50405,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -50386,6 +50776,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -50437,6 +50831,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -51468,6 +51866,10 @@
           {
             "type": ")",
             "named": false
+          },
+          {
+            "type": "argument_reference",
+            "named": true
           },
           {
             "type": "identifier",
@@ -52964,6 +53366,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -52981,6 +53387,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "generic_type",
             "named": true
@@ -53032,6 +53442,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -53108,6 +53522,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -53159,6 +53577,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -53225,6 +53647,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -54523,6 +54949,24 @@
           }
         ]
       },
+      "frame": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "preprocessor_name",
+            "named": true
+          }
+        ]
+      },
       "function": {
         "multiple": false,
         "required": false,
@@ -54537,6 +54981,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -55990,6 +56438,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -56023,6 +56475,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -56226,6 +56682,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -56259,6 +56719,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -56299,6 +56763,10 @@
         "multiple": true,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -56475,6 +56943,10 @@
       "required": false,
       "types": [
         {
+          "type": "argument_reference",
+          "named": true
+        },
+        {
           "type": "array_access",
           "named": true
         },
@@ -56518,6 +56990,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -56551,6 +57027,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -58046,6 +58526,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -58102,6 +58586,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -58151,6 +58639,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -58255,6 +58747,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -58500,6 +58996,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -58527,6 +59027,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -59485,6 +59989,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -59502,6 +60010,53 @@
           }
         ]
       }
+    }
+  },
+  {
+    "type": "positional_arguments",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "argument_reference",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "date_literal",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "macro_concatenated_name",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -60171,6 +60726,10 @@
         "multiple": true,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -61546,6 +62105,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -63589,7 +64152,7 @@
       }
     },
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "types": [
         {
@@ -63918,6 +64481,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -64005,6 +64572,10 @@
         "multiple": true,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -64845,6 +65416,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -65074,6 +65649,10 @@
             "named": false
           },
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -65096,6 +65675,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -65109,6 +65692,10 @@
         "multiple": true,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -65146,6 +65733,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -65163,6 +65754,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -66589,6 +67184,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -68372,6 +68971,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -68475,6 +69078,10 @@
           "named": true
         },
         {
+          "type": "positional_arguments",
+          "named": true
+        },
+        {
           "type": "single_run",
           "named": true
         },
@@ -68493,6 +69100,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -68526,6 +69137,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -68543,6 +69158,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -69119,6 +69738,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -69589,6 +70212,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -69606,6 +70233,10 @@
         "multiple": true,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -69629,6 +70260,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -69646,6 +70281,10 @@
         "multiple": true,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -69989,6 +70628,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -70006,6 +70649,10 @@
         "multiple": true,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -70029,6 +70676,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -70046,6 +70697,10 @@
         "multiple": true,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -70971,6 +71626,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -71132,6 +71791,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -71579,6 +72242,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -71643,6 +72310,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -71678,6 +72349,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -71878,6 +72553,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -71905,6 +72584,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -73820,6 +74503,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -75089,6 +75776,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -75122,6 +75813,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -80076,6 +80771,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -80171,6 +80870,10 @@
         "multiple": true,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -81816,6 +82519,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -82749,6 +83456,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -82818,6 +83529,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -82977,7 +83692,31 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "macro_concatenated_name",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "opsys_file",
+            "named": true
+          },
+          {
+            "type": "qualified_name",
+            "named": true
+          },
+          {
+            "type": "shell_token",
             "named": true
           },
           {
@@ -83631,6 +84370,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -83835,6 +84578,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -83853,6 +84600,10 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "argument_reference",
+          "named": true
+        },
         {
           "type": "identifier",
           "named": true
@@ -84175,6 +84926,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -87492,6 +88247,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -87647,6 +88406,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -87935,6 +88698,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -88351,6 +89118,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -88964,6 +89735,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -88985,6 +89760,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -89008,6 +89787,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -89021,6 +89804,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -89043,6 +89830,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -89106,6 +89897,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "array_access",
             "named": true
           },
@@ -89127,6 +89922,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "array_access",
             "named": true
@@ -89150,6 +89949,10 @@
         "required": false,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -89163,6 +89966,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -89185,6 +89992,10 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -89234,6 +90045,10 @@
         "required": true,
         "types": [
           {
+            "type": "argument_reference",
+            "named": true
+          },
+          {
             "type": "function_call",
             "named": true
           },
@@ -89263,6 +90078,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "argument_reference",
+            "named": true
+          },
           {
             "type": "identifier",
             "named": true
@@ -90126,6 +90945,10 @@
   },
   {
     "type": "EDITOR",
+    "named": false
+  },
+  {
+    "type": "EDITOR-TAB",
     "named": false
   },
   {
@@ -92411,6 +93234,10 @@
   },
   {
     "type": "share_lock",
+    "named": true
+  },
+  {
+    "type": "shell_token",
     "named": true
   },
   {
