@@ -5,8 +5,6 @@ export default ({ kw }) => ({
       $.binary_expression,
       $.unary_expression,
       $._primary_expression,
-      // Bare argument references stay extras instead of starting expression statements.
-      $.argument_reference,
     ),
 
   // oxlint-disable-next-line tree-sitter-optimize/body-extraction, tree-sitter-optimize/inline-dispatcher-boundary

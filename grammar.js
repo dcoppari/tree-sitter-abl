@@ -332,7 +332,6 @@ export default grammar({
           alias($._signed_number_literal, $.number_literal),
           $.boolean_literal,
           $.preprocessor_name,
-          $.argument_reference,
           alias($.__include_operator_argument, $.comparison_operator),
         ),
       // oxlint-disable-next-line tree-sitter-optimize/token-packing
@@ -445,7 +444,6 @@ export default grammar({
           alias($._signed_number_literal, $.number_literal),
           $.boolean_literal,
           $.preprocessor_name,
-          $.argument_reference,
           $.parenthesized_identifier,
         ),
       argument_reference: ($) => token(/\{(?:[0-9]+|\*)\}/),
@@ -490,6 +488,7 @@ export default grammar({
           $.macro_concatenated_name,
           $.identifier,
           $.qualified_name,
+          $.argument_reference,
           alias($._kw_procedure, $.identifier),
           alias($._kw_interface, $.identifier),
         ),
@@ -672,6 +671,7 @@ export default grammar({
           $.macro_concatenated_name,
           $.identifier,
           $.preprocessor_name,
+          $.argument_reference,
           alias($._kw_interface, $.identifier),
         ),
 
