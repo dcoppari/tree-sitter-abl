@@ -195,3 +195,58 @@ PUT SCREEN ROW 5 COL 10 "Text".
     row: (number_literal)
     column: (number_literal)
     value: (string_literal)))
+
+================================================================================
+PUT SCREEN - value COL before ROW order
+================================================================================
+
+PUT SCREEN "Text" COL 10 ROW 5.
+PUT SCREEN "Text" COL 10.
+PUT SCREEN COLOR value('RED') 'Label' COL 9 ROW 3.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (put_screen_statement
+    value: (string_literal)
+    column: (number_literal)
+    row: (number_literal))
+  (put_screen_statement
+    value: (string_literal)
+    column: (number_literal))
+  (put_screen_statement
+    (color_phrase
+      color: (function_call
+        function: (identifier)
+        (arguments
+          (argument
+            name: (string_literal)))))
+    value: (string_literal)
+    column: (number_literal)
+    row: (number_literal)))
+
+================================================================================
+PUT SCREEN - value with mid-COLOR before ROW (legacy)
+================================================================================
+
+PUT SCREEN 'Sc' COLOR brown ROW 2 COL 5.
+PUT SCREEN 'Sc' COLOR brown ROW 2.
+PUT SCREEN 'Sc' ROW 2.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (put_screen_statement
+    value: (string_literal)
+    (color_phrase
+      color: (identifier))
+    row: (number_literal)
+    column: (number_literal))
+  (put_screen_statement
+    value: (string_literal)
+    (color_phrase
+      color: (identifier))
+    row: (number_literal))
+  (put_screen_statement
+    value: (string_literal)
+    row: (number_literal)))

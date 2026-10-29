@@ -445,3 +445,24 @@ UPDATE field1 GO-ON(F1, "F2" F3, "F4").
       (string_literal)
       (identifier)
       (string_literal))))
+
+================================================================================
+UPDATE with argument_qualified_name fields
+================================================================================
+
+update {1}.parcla {1}.parde1 with frame panta.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (update_statement
+    (field
+      field: (qualified_name
+        left: (argument_reference)
+        right: (identifier)))
+    (field
+      field: (qualified_name
+        left: (argument_reference)
+        right: (identifier)))
+    (frame_phrase
+      frame: (identifier))))

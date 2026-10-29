@@ -74,3 +74,19 @@ TRIGGER PROCEDURE FOR WRITE OF Customer NEW BUFFER currentRow OLD previousRow.
     object: (identifier)
     new_buffer: (identifier)
     old_buffer: (identifier)))
+
+================================================================================
+TRIGGER PROCEDURE FOR ASSIGN OF field with OLD VALUE (no AS/LIKE)
+================================================================================
+
+TRIGGER PROCEDURE FOR Assign OF FACUSERV.estper
+    OLD VALUE oldper.
+
+---
+
+(source_code
+  (trigger_procedure_statement
+    object: (qualified_name
+      left: (identifier)
+      right: (identifier))
+    value: (identifier)))

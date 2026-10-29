@@ -122,3 +122,90 @@ UNIX VALUE("cp usr/myfile.").
                 value: (identifier))))))))
   (unix_statement
     command: (string_literal)))
+
+================================================================================
+UNIX SILENT with Unix-style flags and output redirect
+================================================================================
+
+UNIX SILENT unix2dos -q VALUE(wfilename).
+UNIX SILENT VALUE(search("quoter")) ASCCTACT > ctacte.q.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (unix_statement
+    (silent)
+    command_token: (identifier)
+    command_token: (shell_token)
+    command: (identifier))
+  (unix_statement
+    (silent)
+    command: (function_call
+      function: (identifier)
+      (arguments
+        (argument
+          name: (string_literal))))
+    command_token: (identifier)
+    command_token: (shell_token)
+    command_token: (qualified_name
+      left: (identifier)
+      right: (identifier))))
+
+================================================================================
+UNIX - relative path redirect target
+================================================================================
+
+UNIX SILENT VALUE(search("quoter")) ../datos/muni.txt > muni.q.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (unix_statement
+    (silent)
+    command: (function_call
+      function: (identifier)
+      (arguments
+        (argument
+          name: (string_literal))))
+    command_token: (opsys_file)
+    command_token: (shell_token)
+    command_token: (qualified_name
+      left: (identifier)
+      right: (identifier))))
+
+================================================================================
+UNIX - absolute path arguments
+================================================================================
+
+UNIX SILENT rm /us1/pro/cct/cctayu90.p.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (unix_statement
+    (silent)
+    command_token: (identifier)
+    command_token: (opsys_file)))
+
+================================================================================
+UNIX - comma separator and absolute path
+================================================================================
+
+UNIX VALUE(search("quoter")) -d , /us1/pro/cct/CCTCUENT.DAT > prueba.q.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (unix_statement
+    command: (function_call
+      function: (identifier)
+      (arguments
+        (argument
+          name: (string_literal))))
+    command_token: (shell_token)
+    command_token: (shell_token)
+    command_token: (opsys_file)
+    command_token: (shell_token)
+    command_token: (qualified_name
+      left: (identifier)
+      right: (identifier))))

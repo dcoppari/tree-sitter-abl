@@ -79,3 +79,18 @@ CONNECT VALUE("-db C:\\OpenEdge\\WRK\\db\\Sports2020 -H dbserver -S 1900") NO-ER
         (argument
           name: (string_literal))))
     (no_error)))
+
+================================================================================
+CONNECT with Unix filesystem path
+================================================================================
+
+connect /us2/cable/bdgpru/bdg -ld cable -1.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (connect_statement
+    database: (opsys_file)
+    parameter: (identifier)
+    value: (identifier)
+    parameter: (identifier)))

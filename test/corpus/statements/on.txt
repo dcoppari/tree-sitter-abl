@@ -661,3 +661,59 @@ ON "F4" OF hb PERSISTENT RUN chx IN THIS-PROCEDURE.
     procedure: (identifier)
     (in_phrase
       context: (identifier))))
+
+================================================================================
+ON database event OF table IN FRAME frame
+================================================================================
+
+on FIND of wTmpTxt in frame fEditor do:
+    next.
+end.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (on_statement
+    object: (identifier)
+    frame: (identifier)
+    (do_statement
+      (body
+        (next_statement)))))
+
+================================================================================
+ON TAB EDITOR-TAB key function
+================================================================================
+
+on tab editor-tab.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (on_statement
+    event: (identifier)
+    function: (key_function)))
+
+================================================================================
+ON event OF argument_reference IN FRAME argument_reference
+================================================================================
+
+on return of {4} in frame {1} do:
+  assign a = b.
+end.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (on_statement
+    event: (identifier)
+    (of_phrase
+      widget: (widget_phrase
+        field: (argument_reference)
+        frame: (argument_reference)))
+    (do_statement
+      (body
+        (assign_statement
+          (assign_phrase
+            (assign_pair
+              left: (identifier)
+              right: (identifier))))))))
