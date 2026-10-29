@@ -6,7 +6,8 @@ export default ({ kw }) => ({
       // oxlint-disable-next-line tree-sitter-optimize/inline-keyword-owner
       kw("CASE"),
       $._expression,
-      alias($._colon, ":"),
+      // Legacy code opens the block with a period: CASE x.
+      choice(alias($._colon, ":"), alias($._terminator_dot, ".")),
       optional($.__case_items),
       optional($.case_otherwise_phrase),
       $._kw_end,
