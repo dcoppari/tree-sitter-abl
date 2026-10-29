@@ -183,3 +183,17 @@ ENABLE ALL EXCEPT wTotal[1] wTotal[2] WITH FRAME wMain.
       index: (number_literal))
     (frame_phrase
       frame: (identifier))))
+
+================================================================================
+ENABLE ALL EXCEPT with no items (EXCEPT followed directly by WITH FRAME)
+================================================================================
+
+enable all except with frame wMain.
+
+--------------------------------------------------------------------------------
+
+(source_code
+  (enable_statement
+    (all)
+    (frame_phrase
+      frame: (identifier))))
