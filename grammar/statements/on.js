@@ -143,6 +143,7 @@ export default ({ kw }) => ({
   __on_database_event_action: ($) =>
     seq(
       field("object", $._qualified_identifier),
+      optional(seq($._kw_in, kw("FRAME", { offset: 4 }), field("frame", $._frame_name))),
       optional($.__on_database_event_tail),
       choice($.__on_revert_action, $._statement),
     ),
@@ -220,6 +221,7 @@ export default ({ kw }) => ({
       kw("SCROLL-MODE"),
       $._kw_stop,
       $._kw_tab,
+      kw("EDITOR-TAB"),
     ),
   // oxlint-disable-next-line tree-sitter-optimize/broad-dispatcher
   __on_ui_key_function: ($) =>
