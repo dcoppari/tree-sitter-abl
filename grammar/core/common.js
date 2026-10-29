@@ -57,13 +57,27 @@ export default ({ kw }) => ({
   _except_field_names: ($) =>
     prec.right(seq(field("except", $.identifier), optional($._except_field_names))),
   _except_name_list: ($) =>
-    prec.right(seq(field("except", $._qualified_identifier), optional($._except_name_list))),
+    prec.right(
+      seq(
+        field("except", choice($._qualified_identifier, alias($.__except_array_access, $.array_access))),
+        optional($._except_name_list),
+      ),
+    ),
+  // Subscripted names only (EXCEPT w[1] w[2]); a general array_access can start
+  // with "(" and would make a parenthesized item ambiguous.
+  __except_array_access: ($) =>
+    seq(field("array", $._qualified_identifier), "[", field("index", $._array_subscript), "]"),
   _import_export_except_names: ($) =>
     prec.right(seq($._qualified_identifier, optional($._import_export_except_names))),
   // oxlint-disable-next-line tree-sitter-optimize/shared-keyword-field-inline
   _initial_phrase: ($) => seq(kw("INITIAL", { offset: 4 }), field("initial", $._initial_value)),
   _frame_name: ($) =>
-    choice($.identifier, alias($._numeric_identifier, $.identifier), $.preprocessor_name),
+    choice(
+      $.identifier,
+      alias($._numeric_identifier, $.identifier),
+      $.preprocessor_name,
+      $.argument_reference,
+    ),
   _frame_phrases: ($) => seq($.frame_phrase, optional($.frame_phrase)),
   // VIEW and HIDE are the only users, and both admit a trailing IN WINDOW that
   // the shared widget_phrase cannot be told apart from IN FRAME with a single
