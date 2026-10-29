@@ -4,7 +4,7 @@ export default ({ kw }) => ({
     // oxlint-disable-next-line tree-sitter-optimize/non-empty-tail-extraction
     seq(
       $._kw_connect,
-      optional(field("database", choice($.identifier, $.string_literal, $.function_call))),
+      optional(field("database", choice($.identifier, $.string_literal, $.function_call, $.opsys_file))),
       // oxlint-disable-next-line tree-sitter-optimize/recurse
       repeat(
         seq(
