@@ -20,15 +20,27 @@ export default ({ kw }) => ({
         ),
         field("value", $._expression),
       ),
-      // Legacy order: value ROW [COL]. ROW is required to disambiguate.
+      // Legacy order: value [COLOR] ROW [COL] or value [COLOR] COL [ROW].
+      // ROW or COL is required to disambiguate.
       seq(
         field("value", $._expression),
-        // oxlint-disable-next-line tree-sitter-optimize/shared-sequence
-        seq($._kw_row, field("row", $._expression)),
-        // oxlint-disable-next-line tree-sitter-optimize/shared-sequence
-        optional(
-          // oxlint-disable-next-line tree-sitter-optimize/shared-sequence, tree-sitter-optimize/shared-choice, tree-sitter-optimize/inline-keyword-owner
-          seq(choice($._kw_column, kw("COL")), field("column", $._expression)),
+        optional(alias($.__put_screen_color_phrase, $.color_phrase)),
+        choice(
+          seq(
+            // oxlint-disable-next-line tree-sitter-optimize/shared-sequence
+            seq($._kw_row, field("row", $._expression)),
+            // oxlint-disable-next-line tree-sitter-optimize/shared-sequence
+            optional(
+              // oxlint-disable-next-line tree-sitter-optimize/shared-sequence, tree-sitter-optimize/shared-choice, tree-sitter-optimize/inline-keyword-owner
+              seq(choice($._kw_column, kw("COL")), field("column", $._expression)),
+            ),
+          ),
+          seq(
+            // oxlint-disable-next-line tree-sitter-optimize/shared-sequence, tree-sitter-optimize/shared-choice, tree-sitter-optimize/inline-keyword-owner
+            seq(choice($._kw_column, kw("COL")), field("column", $._expression)),
+            // oxlint-disable-next-line tree-sitter-optimize/shared-sequence
+            optional(seq($._kw_row, field("row", $._expression))),
+          ),
         ),
       ),
     ),
