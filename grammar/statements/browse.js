@@ -34,6 +34,8 @@ export default ({ kw }) => ({
       $.__browse_flag_option,
       seq($._kw_tooltip, field("tooltip", $.__browse_option_expression)),
       seq($._kw_bgcolor, field("bgcolor", $.__browse_option_expression)),
+      // Legacy character-mode color: COLOR MESSAGE, COLOR white/red.
+      seq($._kw_color, field("color", $.color_phrase)),
       seq($._kw_dcolor, field("dcolor", $.__browse_option_expression)),
       seq($._kw_fgcolor, field("fgcolor", $.__browse_option_expression)),
       seq($._kw_font, field("font", $.__browse_option_expression)),
